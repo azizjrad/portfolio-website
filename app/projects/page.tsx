@@ -84,20 +84,20 @@ export default function Projects() {
           <div className="text-center mb-16 sm:mb-20 animate-fade-in">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-teal-500/10 to-purple-500/10 dark:from-teal-400/20 dark:to-purple-400/20 rounded-full border border-teal-200/50 dark:border-teal-400/30 backdrop-blur-sm mb-6 transition-colors duration-300">
               <span className="text-sm font-medium text-teal-700 dark:text-teal-300 transition-colors duration-300">
-                🚀 {t('projectsTitle')}
+                🚀 {t("projectsTitle")}
               </span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 dark:text-slate-100 mb-6 transition-colors duration-300">
-              {t('projectsTitle').split(' ')[0]}{" "}
+              {t("projectsTitle").split(" ")[0]}{" "}
               <span className="relative inline-block">
                 <span className="bg-gradient-to-r from-teal-600 via-purple-600 to-teal-600 dark:from-teal-400 dark:via-purple-400 dark:to-teal-400 bg-clip-text text-transparent transition-colors duration-300">
-                  {t('projectsTitle').split(' ')[1] || 'Projects'}
+                  {t("projectsTitle").split(" ")[1] || "Projects"}
                 </span>
                 <div className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-0.5 sm:h-1 bg-gradient-to-r from-teal-400 to-purple-500 dark:from-teal-300 dark:to-purple-400 rounded-full transition-colors duration-300"></div>
               </span>
             </h1>
             <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-200 leading-relaxed max-w-3xl mx-auto transition-colors duration-300">
-              {t('projectsSubtitle')}
+              {t("projectsSubtitle")}
               project represents a unique challenge and learning experience.
             </p>
           </div>

@@ -25,7 +25,7 @@ const translations = {
     contact: "Contact",
 
     // Home page
-    heroTitle: "Passionate Developer & Creative Problem Solver",
+    heroTitle: "Passionate Developer",
     heroSubtitle:
       "I create beautiful, functional, and user-centered digital experiences that bridge the gap between design and technology.",
     getInTouch: "Get in Touch",
@@ -82,7 +82,7 @@ const translations = {
     contact: "Contact",
 
     // Home page
-    heroTitle: "Développeur Passionné & Résolveur de Problèmes Créatif",
+    heroTitle: "Développeur Passionné",
     heroSubtitle:
       "Je crée des expériences numériques belles, fonctionnelles et centrées sur l'utilisateur qui font le pont entre le design et la technologie.",
     getInTouch: "Prenez Contact",
