@@ -6,6 +6,7 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import BackToTop from "@/components/back-to-top";
 import { ThemeProvider } from "@/contexts/ThemeContext";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 
@@ -27,12 +28,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ThemeProvider>
-          <Navigation />
-          <main className="min-h-screen">{children}</main>
-          <Footer />
-          <BackToTop />
-          <SpeedInsights />
-          <Analytics />
+          <LanguageProvider>
+            <Navigation />
+            <main className="min-h-screen">{children}</main>
+            <Footer />
+            <BackToTop />
+            <SpeedInsights />
+            <Analytics />
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

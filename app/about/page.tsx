@@ -1,4 +1,7 @@
+"use client";
+
 import { Code, Palette, Users, Zap } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const skills = {
   technical: [
@@ -24,6 +27,8 @@ const skills = {
 };
 
 export default function About() {
+  const { t } = useLanguage();
+  
   return (
     <div className="pt-24 relative overflow-hidden">
       {/* Background Elements */}
@@ -45,21 +50,20 @@ export default function About() {
           <div className="text-center mb-16 sm:mb-20 animate-fade-in">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-teal-500/10 to-purple-500/10 dark:from-teal-400/20 dark:to-purple-400/20 rounded-full border border-teal-200/50 dark:border-teal-700/50 backdrop-blur-sm mb-6 transition-all duration-300">
               <span className="text-sm font-medium text-teal-700 dark:text-teal-300 transition-colors duration-300">
-                👋 Get to know me
+                👋 {t('aboutTitle')}
               </span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 dark:text-slate-100 mb-6 transition-colors duration-300">
-              About{" "}
+              {t('aboutTitle').split(' ')[0]}{" "}
               <span className="relative inline-block">
                 <span className="bg-gradient-to-r from-teal-600 via-purple-600 to-teal-600 dark:from-teal-400 dark:via-purple-400 dark:to-teal-400 bg-clip-text text-transparent transition-colors duration-300">
-                  Me
+                  {t('aboutTitle').split(' ')[1] || 'Me'}
                 </span>
                 <div className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-0.5 sm:h-1 bg-gradient-to-r from-teal-400 to-purple-500 dark:from-teal-500 dark:to-purple-400 rounded-full transition-all duration-300"></div>
               </span>
             </h1>
             <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-200 leading-relaxed max-w-3xl mx-auto transition-colors duration-300">
-              Discover my journey, passion for development, and the skills I
-              bring to every project
+              {t('aboutSubtitle')}
             </p>
           </div>
 
@@ -76,23 +80,7 @@ export default function About() {
                 </h2>
                 <div className="prose prose-lg text-slate-600 dark:text-slate-200 max-w-none space-y-6 transition-colors duration-300">
                   <p className="text-base sm:text-lg leading-relaxed">
-                    Hello! I'm a passionate developer with a love for creating
-                    digital experiences that make a difference. My journey into
-                    programming started during my college years, where I
-                    discovered the perfect blend of creativity and logic that
-                    coding offers.
-                  </p>
-                  <p className="text-base sm:text-lg leading-relaxed">
-                    I believe in writing clean, maintainable code and creating
-                    user interfaces that are not only beautiful but also
-                    intuitive and accessible. When I'm not coding, you can find
-                    me exploring new technologies, contributing to open-source
-                    projects, or enjoying a good book.
-                  </p>
-                  <p className="text-base sm:text-lg leading-relaxed">
-                    I'm always excited to take on new challenges and collaborate
-                    with others to bring innovative ideas to life. Let's build
-                    something amazing together!
+                    {t('aboutDescription')}
                   </p>
                 </div>
               </div>
@@ -109,7 +97,7 @@ export default function About() {
                   <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-teal-600 dark:from-teal-400 dark:to-teal-500 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-teal-500/25 dark:shadow-teal-400/25">
                     <Code className="text-white" size={24} />
                   </div>
-                  Technical Skills
+                  {t('skillsTitle')}
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {skills.technical.map((skill, index) => (

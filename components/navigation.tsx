@@ -3,21 +3,23 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Menu, X, Moon, Sun } from "lucide-react";
+import { Menu, X, Moon, Sun, Languages } from "lucide-react";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const navItems = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Projects", href: "/projects" },
-  { name: "Resume", href: "/resume" },
-  { name: "Contact", href: "/contact" },
+  { name: "home", href: "/" },
+  { name: "about", href: "/about" },
+  { name: "projects", href: "/projects" },
+  { name: "resume", href: "/resume" },
+  { name: "contact", href: "/contact" },
 ];
 
 export default function Navigation() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const { language, toggleLanguage, t } = useLanguage();
 
   return (
     <nav className="fixed top-0 w-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border-b border-slate-200/20 dark:border-slate-700/20 z-50 shadow-sm dark:shadow-slate-900/10 transition-all duration-300">
@@ -54,13 +56,27 @@ export default function Navigation() {
                       : "text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-white dark:hover:bg-slate-700 hover:shadow-md dark:hover:shadow-slate-900/20"
                   }`}
                 >
-                  <span className="relative z-10">{item.name}</span>
+                  <span className="relative z-10">{t(item.name)}</span>
                   {pathname !== item.href && (
                     <div className="absolute inset-0 bg-gradient-to-r from-teal-400/10 to-purple-400/10 dark:from-teal-400/20 dark:to-purple-400/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
                   )}
                 </Link>
               ))}
             </div>
+            
+            {/* Language Toggle */}
+            <button
+              onClick={toggleLanguage}
+              className="relative p-3 rounded-full bg-slate-50/80 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-teal-50 dark:hover:bg-slate-700 transition-all duration-300 shadow-sm hover:shadow-md dark:hover:shadow-slate-900/20 group"
+              aria-label="Toggle language"
+              title={`Switch to ${language === "en" ? "Français" : "English"}`}
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-teal-400/10 to-purple-400/10 dark:from-teal-400/20 dark:to-purple-400/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+              <div className="relative z-10 flex items-center space-x-1 transition-transform duration-300 group-hover:scale-110">
+                <Languages size={16} />
+                <span className="text-xs font-semibold uppercase">{language}</span>
+              </div>
+            </button>
             
             {/* Dark Mode Toggle */}
             <button
@@ -77,6 +93,19 @@ export default function Navigation() {
 
           {/* Mobile menu button and theme toggle */}
           <div className="md:hidden flex items-center space-x-2">
+            <button
+              onClick={toggleLanguage}
+              className="relative p-3 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-teal-50 dark:hover:bg-slate-700 transition-all duration-300 shadow-sm hover:shadow-md dark:hover:shadow-slate-900/20 group"
+              aria-label="Toggle language"
+              title={`Switch to ${language === "en" ? "Français" : "English"}`}
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-teal-400/10 to-purple-400/10 dark:from-teal-400/20 dark:to-purple-400/20 rounded-xl scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+              <div className="relative z-10 flex items-center space-x-1 transition-transform duration-300 group-hover:scale-110">
+                <Languages size={14} />
+                <span className="text-xs font-semibold uppercase">{language}</span>
+              </div>
+            </button>
+            
             <button
               onClick={toggleTheme}
               className="relative p-3 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-teal-50 dark:hover:bg-slate-700 transition-all duration-300 shadow-sm hover:shadow-md dark:hover:shadow-slate-900/20 group"
@@ -122,7 +151,7 @@ export default function Navigation() {
                         : "none",
                     }}
                   >
-                    <span className="relative z-10">{item.name}</span>
+                    <span className="relative z-10">{t(item.name)}</span>
                     {pathname !== item.href && (
                       <div className="absolute inset-0 bg-gradient-to-r from-teal-400/10 to-purple-400/10 dark:from-teal-400/20 dark:to-purple-400/20 rounded-xl scale-0 group-hover:scale-100 transition-transform duration-300 ease-out"></div>
                     )}

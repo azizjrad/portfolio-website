@@ -16,8 +16,10 @@ import {
   Clock,
 } from "lucide-react";
 import { sendContactEmail } from "../../utils/emailSender";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Contact() {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",

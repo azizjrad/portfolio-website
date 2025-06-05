@@ -1,8 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Home() {
+  const { t } = useLanguage();
+
   return (
     <div className="pt-24 relative overflow-hidden">
       {/* Background Elements */}
@@ -50,7 +55,7 @@ export default function Home() {
               <div className="space-y-4 sm:space-y-6">
                 <div className="inline-flex items-center px-3 py-2 sm:px-4 sm:py-2 bg-gradient-to-r from-teal-500/10 to-purple-500/10 dark:from-teal-400/20 dark:to-purple-400/20 rounded-full border border-teal-200/50 dark:border-teal-700/50 backdrop-blur-sm transition-all duration-300">
                   <span className="text-xs sm:text-sm font-medium text-teal-700 dark:text-teal-300 transition-colors duration-300">
-                    👋 Welcome to my portfolio
+                    👋 {t("heroTitle")}
                   </span>
                 </div>
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-800 dark:text-slate-100 leading-tight transition-colors duration-300">
@@ -64,9 +69,7 @@ export default function Home() {
                 </h1>
               </div>
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-600 dark:text-slate-200 leading-relaxed max-w-2xl mx-auto lg:mx-0 transition-colors duration-300">
-                A passionate developer creating beautiful, functional, and
-                user-centered digital experiences. I love turning complex
-                problems into simple, elegant solutions.
+                {t("heroSubtitle")}
               </p>
 
               {/* Responsive button layout */}
@@ -85,7 +88,7 @@ export default function Home() {
                   <div className="absolute inset-0 rounded-2xl border-2 border-white/30 opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-opacity duration-300"></div>
 
                   <span className="relative z-10 flex items-center">
-                    View My Work
+                    {t("viewMyWork")}
                     <ArrowRight
                       className="ml-2 group-hover:translate-x-2 group-hover:scale-125 transition-all duration-300"
                       size={18}
@@ -96,7 +99,7 @@ export default function Home() {
                   href="/contact"
                   className="group relative inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 border-2 border-teal-600 dark:border-teal-500 text-teal-600 dark:text-teal-400 font-semibold rounded-2xl hover:bg-teal-600 dark:hover:bg-teal-500 hover:text-white transition-all duration-300 shadow-lg hover:shadow-2xl shadow-teal-500/10 dark:shadow-teal-400/10 transform hover:-translate-y-2 backdrop-blur-sm bg-white/80 dark:bg-slate-800/80 w-full sm:w-auto text-sm sm:text-base"
                 >
-                  <span className="relative z-10">Get In Touch</span>
+                  <span className="relative z-10">{t("getInTouch")}</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-teal-600 to-purple-600 dark:from-teal-500 dark:to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
                 </Link>
               </div>
