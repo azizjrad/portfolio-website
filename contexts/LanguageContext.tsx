@@ -90,12 +90,25 @@ const translations = {
     callMe: "Call Me",
     successMessage: "Thank you for your message! I'll get back to you soon.",
     errorMessage: "Failed to send message. Please try again.",
-    networkError: "Network error. Please check your connection and try again.",
-
-    // Resume page
+    networkError: "Network error. Please check your connection and try again.",    // Resume page
     resumeTitle: "Resume",
-    resumeSubtitle: "My professional experience and qualifications",
-    downloadPdf: "Download PDF",
+    resumeSubtitle: "A comprehensive overview of my professional experience, education, and skills",
+    downloadPdf: "Download PDF Resume",
+    myResume: "My Resume",
+    email: "Email",
+    phone: "Phone",
+    location: "Location",
+    portfolio: "Portfolio",
+    professionalSummary: "Professional Summary",
+    professionalSummaryText: "Passionate and detail-oriented Frontend Developer with 3+ years of experience creating responsive, user-friendly web applications. Proficient in modern JavaScript frameworks and committed to writing clean, maintainable code. Strong problem-solving skills and experience working in agile development environments. Seeking to leverage technical expertise and creative problem-solving abilities to contribute to innovative web development projects.",
+    professionalExperience: "Professional Experience",
+    education: "Education",
+    certifications: "Certifications",
+    skills: "Skills",
+    relevantCoursework: "Relevant Coursework",
+    credentialId: "Credential ID",
+    clickToView: "Click to view certificate →",
+    gpa: "GPA",
 
     // Footer
     footerText: "Built with passion using Next.js and Tailwind CSS",
@@ -183,12 +196,25 @@ const translations = {
     callMe: "Appelez-Moi",
     successMessage: "Merci pour votre message ! Je vous répondrai bientôt.",
     errorMessage: "Échec de l'envoi du message. Veuillez réessayer.",
-    networkError: "Erreur réseau. Veuillez vérifier votre connexion et réessayer.",
-
-    // Resume page
+    networkError: "Erreur réseau. Veuillez vérifier votre connexion et réessayer.",    // Resume page
     resumeTitle: "CV",
-    resumeSubtitle: "Mon expérience professionnelle et mes qualifications",
-    downloadPdf: "Télécharger PDF",
+    resumeSubtitle: "Un aperçu complet de mon expérience professionnelle, de mon éducation et de mes compétences",
+    downloadPdf: "Télécharger CV PDF",
+    myResume: "Mon CV",
+    email: "Email",
+    phone: "Téléphone",
+    location: "Localisation",
+    portfolio: "Portfolio",
+    professionalSummary: "Résumé Professionnel",
+    professionalSummaryText: "Développeur Frontend passionné et soucieux du détail avec plus de 3 ans d'expérience dans la création d'applications web responsives et conviviales. Compétent dans les frameworks JavaScript modernes et engagé à écrire du code propre et maintenable. Solides compétences en résolution de problèmes et expérience de travail dans des environnements de développement agiles. Cherche à tirer parti de l'expertise technique et des capacités créatives de résolution de problèmes pour contribuer à des projets de développement web innovants.",
+    professionalExperience: "Expérience Professionnelle",
+    education: "Éducation",
+    certifications: "Certifications",
+    skills: "Compétences",
+    relevantCoursework: "Cours Pertinents",
+    credentialId: "ID de Certification",
+    clickToView: "Cliquez pour voir le certificat →",
+    gpa: "Moyenne",
 
     // Footer
     footerText: "Construit avec passion en utilisant Next.js et Tailwind CSS",

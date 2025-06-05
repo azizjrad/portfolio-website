@@ -9,6 +9,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { generateResumePDF } from "../../utils/pdfGenerator";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const experience = [
   {
@@ -90,6 +91,7 @@ const skills = [
 ];
 
 export default function Resume() {
+  const { t } = useLanguage();
   const handleDownloadPDF = () => {
     const resumeData = {
       name: "Aziz Jrad",
@@ -110,21 +112,20 @@ export default function Resume() {
         {/* Header */}
         <div className="text-center mb-12 animate-fade-in">
           <h1 className="text-4xl sm:text-5xl font-bold text-slate-800 dark:text-slate-100 mb-6 transition-colors duration-300">
-            My{" "}
+            {t('myResume').split(' ')[0]}{" "}
             <span className="bg-gradient-to-r from-teal-600 to-purple-600 dark:from-teal-400 dark:to-purple-400 bg-clip-text text-transparent transition-colors duration-300">
-              Resume
+              {t('myResume').split(' ')[1] || t('resumeTitle')}
             </span>
           </h1>
           <p className="text-xl text-slate-600 dark:text-slate-200 mb-8 leading-relaxed transition-colors duration-300">
-            A comprehensive overview of my professional experience, education,
-            and skills
+            {t('resumeSubtitle')}
           </p>
           <button
             onClick={handleDownloadPDF}
             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-teal-600 to-teal-700 dark:from-teal-500 dark:to-teal-600 text-white font-medium rounded-full hover:from-teal-700 hover:to-teal-800 dark:hover:from-teal-400 dark:hover:to-teal-500 transition-all duration-200 shadow-lg hover:shadow-xl dark:shadow-xl dark:hover:shadow-2xl transform hover:-translate-y-1"
           >
             <Download className="mr-2" size={20} />
-            Download PDF Resume
+            {t('downloadPdf')}
           </button>
         </div>
 
@@ -138,7 +139,7 @@ export default function Resume() {
               />
               <div>
                 <p className="text-sm text-slate-500 dark:text-slate-400 transition-colors duration-300">
-                  Email
+                  {t('email')}
                 </p>
                 <p className="font-medium text-slate-800 dark:text-slate-100 transition-colors duration-300">
                   aziz.jrad@esen.tn
@@ -152,7 +153,7 @@ export default function Resume() {
               />
               <div>
                 <p className="text-sm text-slate-500 dark:text-slate-400 transition-colors duration-300">
-                  Phone
+                  {t('phone')}
                 </p>
                 <p className="font-medium text-slate-800 dark:text-slate-100 transition-colors duration-300">
                   (216) 95 650 081
@@ -166,7 +167,7 @@ export default function Resume() {
               />
               <div>
                 <p className="text-sm text-slate-500 dark:text-slate-400 transition-colors duration-300">
-                  Location
+                  {t('location')}
                 </p>
                 <p className="font-medium text-slate-800 dark:text-slate-100 transition-colors duration-300">
                   Nabeul, Tunisia
@@ -180,7 +181,7 @@ export default function Resume() {
               />
               <div>
                 <p className="text-sm text-slate-500 dark:text-slate-400 transition-colors duration-300">
-                  Portfolio
+                  {t('portfolio')}
                 </p>
                 <p className="font-medium text-slate-800 dark:text-slate-100 transition-colors duration-300">
                   azizjrad.dev
@@ -193,23 +194,17 @@ export default function Resume() {
         {/* Professional Summary */}
         <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg dark:shadow-xl p-8 mb-8 animate-slide-up transition-colors duration-300 border border-transparent dark:border-slate-700/50">
           <h2 className="text-2xl font-bold text-slate-800 dark:text-slate-100 mb-4 transition-colors duration-300">
-            Professional Summary
+            {t('professionalSummary')}
           </h2>
           <p className="text-slate-600 dark:text-slate-200 leading-relaxed transition-colors duration-300">
-            Passionate and detail-oriented Frontend Developer with 3+ years of
-            experience creating responsive, user-friendly web applications.
-            Proficient in modern JavaScript frameworks and committed to writing
-            clean, maintainable code. Strong problem-solving skills and
-            experience working in agile development environments. Seeking to
-            leverage technical expertise and creative problem-solving abilities
-            to contribute to innovative web development projects.
+            {t('professionalSummaryText')}
           </p>
         </div>
 
         {/* Experience */}
         <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg dark:shadow-xl p-8 mb-8 animate-slide-up transition-colors duration-300 border border-transparent dark:border-slate-700/50">
           <h2 className="text-2xl font-bold text-slate-800 dark:text-slate-100 mb-6 transition-colors duration-300">
-            Professional Experience
+            {t('professionalExperience')}
           </h2>
           <div className="space-y-8">
             {experience.map((job, index) => (
@@ -262,7 +257,7 @@ export default function Resume() {
         {/* Education */}
         <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg dark:shadow-xl p-8 mb-8 animate-slide-up transition-colors duration-300 border border-transparent dark:border-slate-700/50">
           <h2 className="text-2xl font-bold text-slate-800 dark:text-slate-100 mb-6 transition-colors duration-300">
-            Education
+            {t('education')}
           </h2>
           {education.map((edu, index) => (
             <div key={index} className="mb-6 last:mb-0">
@@ -283,11 +278,11 @@ export default function Resume() {
                   {edu.location}
                 </span>
                 <span className="mx-2">•</span>
-                <span>GPA: {edu.gpa}</span>
+                <span>{t('gpa')}: {edu.gpa}</span>
               </div>
               <div>
                 <p className="text-slate-600 dark:text-slate-300 mb-2 transition-colors duration-300">
-                  Relevant Coursework:
+                  {t('relevantCoursework')}:
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {edu.relevant.map((course) => (
@@ -307,7 +302,7 @@ export default function Resume() {
         {/* Certifications */}
         <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg dark:shadow-xl p-8 animate-slide-up transition-colors duration-300 border border-transparent dark:border-slate-700/50">
           <h2 className="text-2xl font-bold text-slate-800 dark:text-slate-100 mb-6 transition-colors duration-300">
-            Certifications
+            {t('certifications')}
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
             {certifications.map((cert, index) => (
@@ -334,10 +329,10 @@ export default function Resume() {
                   {cert.date}
                 </p>
                 <p className="text-slate-500 dark:text-slate-400 text-xs font-mono transition-colors duration-300">
-                  Credential ID: {cert.credentialId}
+                  {t('credentialId')}: {cert.credentialId}
                 </p>
                 <div className="mt-2 text-xs text-purple-600 dark:text-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  Click to view certificate →
+                  {t('clickToView')}
                 </div>
               </a>
             ))}
@@ -347,7 +342,7 @@ export default function Resume() {
         {/* Skills */}
         <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg dark:shadow-xl p-8 mt-8 animate-slide-up transition-colors duration-300 border border-transparent dark:border-slate-700/50">
           <h2 className="text-2xl font-bold text-slate-800 dark:text-slate-100 mb-6 transition-colors duration-300">
-            Skills
+            {t('skills')}
           </h2>
           <div className="flex flex-wrap gap-3">
             {skills.map((skill, index) => (
