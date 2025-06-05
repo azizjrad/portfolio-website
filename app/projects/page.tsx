@@ -38,8 +38,8 @@ const projects = [
       "A modern, responsive portfolio website showcasing my work with smooth animations and optimized performance.",
     image: "/portfolio.png",
     technologies: ["Next.js", "Tailwind CSS"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/username/project",
+    liveUrl: "https://portfolio-website-five-brown.vercel.app/",
+    githubUrl: "https://github.com/azizjrad/portfolio-website",
     featured: false,
   },
   {
