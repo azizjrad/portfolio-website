@@ -438,8 +438,16 @@ export default function Contact() {
                   something amazing together!
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-                  <a
-                    href="mailto:aziz.jrad@esen.tn"
+                  <button
+                    onClick={() => {
+                      document.getElementById("name")?.focus();
+                      document
+                        .getElementById("name")
+                        ?.scrollIntoView({
+                          behavior: "smooth",
+                          block: "center",
+                        });
+                    }}
                     className="group inline-flex items-center px-8 py-4 bg-white/20 dark:bg-white/30 backdrop-blur-sm text-white font-semibold rounded-xl hover:bg-white/30 dark:hover:bg-white/40 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 border border-white/20 dark:border-white/30 hover:border-white/40 dark:hover:border-white/50"
                   >
                     <Mail
@@ -447,7 +455,7 @@ export default function Contact() {
                       size={20}
                     />
                     Start a Conversation
-                  </a>
+                  </button>
                   <a
                     href="tel:+21695650081"
                     className="group inline-flex items-center px-8 py-4 bg-transparent text-white font-semibold rounded-xl hover:bg-white/10 dark:hover:bg-white/20 transition-all duration-300 border-2 border-white/30 dark:border-white/40 hover:border-white/50 dark:hover:border-white/60 transform hover:-translate-y-1"
