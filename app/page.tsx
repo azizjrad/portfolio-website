@@ -59,10 +59,10 @@ export default function Home() {
                   </span>
                 </div>
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-800 dark:text-slate-100 leading-tight transition-colors duration-300">
-                  Hi, I'm{" "}
+                  {t("greeting")}{" "}
                   <span className="relative inline-block">
                     <span className="bg-gradient-to-r from-teal-600 to-purple-600 dark:from-teal-400 dark:to-purple-400 bg-clip-text text-transparent">
-                      Aziz Jrad
+                      {t("myName")}
                     </span>
                     <div className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-0.5 sm:h-1 bg-gradient-to-r from-teal-400 to-purple-500 dark:from-teal-500 dark:to-purple-400 rounded-full"></div>
                   </span>

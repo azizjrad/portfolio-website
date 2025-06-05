@@ -22,14 +22,14 @@ const translations = {
     about: "About",
     projects: "Projects",
     resume: "Resume",
-    contact: "Contact",
-
-    // Home page
+    contact: "Contact",    // Home page
     heroTitle: "Passionate Developer",
     heroSubtitle:
       "I create beautiful, functional, and user-centered digital experiences that bridge the gap between design and technology.",
     getInTouch: "Get in Touch",
     viewMyWork: "View My Work",
+    greeting: "Hi, I'm",
+    myName: "Aziz Jrad",
 
     // About page
     aboutTitle: "About Me",
@@ -127,14 +127,14 @@ const translations = {
     about: "À propos",
     projects: "Projets",
     resume: "CV",
-    contact: "Contact",
-
-    // Home page
+    contact: "Contact",    // Home page
     heroTitle: "Développeur Passionné",
     heroSubtitle:
       "Je crée des expériences numériques belles, fonctionnelles et centrées sur l'utilisateur qui font le pont entre le design et la technologie.",
     getInTouch: "Prenez Contact",
     viewMyWork: "Voir Mon Travail",
+    greeting: "Salut, je suis",
+    myName: "Aziz Jrad",
 
     // About page
     aboutTitle: "À Propos de Moi",
