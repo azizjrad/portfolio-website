@@ -61,20 +61,20 @@ export default function Contact() {
       if (success) {
         setSubmitStatus({
           type: "success",
-          message: "Thank you for your message! I'll get back to you soon.",
+          message: t('successMessage'),
         });
         // Reset form
         setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
         setSubmitStatus({
           type: "error",
-          message: "Failed to send message. Please try again.",
+          message: t('errorMessage'),
         });
       }
     } catch (error) {
       setSubmitStatus({
         type: "error",
-        message: "Network error. Please check your connection and try again.",
+        message: t('networkError'),
       });
     } finally {
       setIsSubmitting(false);
@@ -102,22 +102,14 @@ export default function Contact() {
           <div className="text-center mb-16 animate-fade-in">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-teal-500/10 to-purple-500/10 dark:from-teal-400/20 dark:to-purple-400/20 rounded-full border border-teal-200/50 dark:border-teal-400/30 backdrop-blur-sm mb-6 transition-colors duration-300">
               <span className="text-sm font-medium text-teal-700 dark:text-teal-300 transition-colors duration-300">
-                💌 Let's Connect
+                {t('connectBadge')}
               </span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 dark:text-slate-100 mb-6 transition-colors duration-300">
-              Get In{" "}
-              <span className="relative inline-block">
-                <span className="bg-gradient-to-r from-teal-600 via-purple-600 to-teal-600 dark:from-teal-400 dark:via-purple-400 dark:to-teal-400 bg-clip-text text-transparent transition-colors duration-300">
-                  Touch
-                </span>
-                <div className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-0.5 sm:h-1 bg-gradient-to-r from-teal-400 to-purple-500 dark:from-teal-300 dark:to-purple-400 rounded-full transition-colors duration-300"></div>
-              </span>
+              {t('contactTitle')}{" "}
             </h1>
             <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-200 leading-relaxed max-w-3xl mx-auto transition-colors duration-300">
-              I'm always interested in new opportunities and collaborations.
-              Whether you have a project in mind or just want to say hello, I'd
-              love to hear from you!
+              {t('contactPageDescription')}
             </p>
           </div>
 
@@ -133,13 +125,11 @@ export default function Contact() {
                       <MessageCircle className="text-white" size={24} />
                     </div>
                     <h2 className="text-2xl font-bold text-slate-800 dark:text-slate-100 transition-colors duration-300">
-                      Let's Connect
+                      {t('letsConnect')}
                     </h2>
                   </div>
                   <p className="text-slate-600 dark:text-slate-200 mb-8 leading-relaxed transition-colors duration-300">
-                    I'm currently available for freelance work and full-time
-                    opportunities. Feel free to reach out through any of the
-                    channels below.
+                    {t('availableForWork')}
                   </p>
 
                   <div className="space-y-6">
@@ -149,7 +139,7 @@ export default function Contact() {
                       </div>
                       <div className="flex-1">
                         <p className="font-semibold text-slate-800 dark:text-slate-100 mb-1 transition-colors duration-300">
-                          Email
+                          {t('emailLabel')}
                         </p>
                         <a
                           href="mailto:aziz.jrad@esen.tn"
@@ -166,7 +156,7 @@ export default function Contact() {
                       </div>
                       <div className="flex-1">
                         <p className="font-semibold text-slate-800 dark:text-slate-100 mb-1 transition-colors duration-300">
-                          Phone
+                          {t('phoneLabel')}
                         </p>
                         <a
                           href="tel:+21695650081"
@@ -183,10 +173,10 @@ export default function Contact() {
                       </div>
                       <div className="flex-1">
                         <p className="font-semibold text-slate-800 dark:text-slate-100 mb-1 transition-colors duration-300">
-                          Location
+                          {t('locationLabel')}
                         </p>
                         <p className="text-slate-600 dark:text-slate-300 font-medium transition-colors duration-300">
-                          Nabeul, Tunisia
+                          {t('locationValue')}
                         </p>
                       </div>
                     </div>
@@ -197,10 +187,10 @@ export default function Contact() {
                       </div>
                       <div className="flex-1">
                         <p className="font-semibold text-slate-800 dark:text-slate-100 mb-1 transition-colors duration-300">
-                          Response Time
+                          {t('responseTimeLabel')}
                         </p>
                         <p className="text-slate-600 dark:text-slate-300 font-medium transition-colors duration-300">
-                          Usually within 24 hours
+                          {t('responseTimeValue')}
                         </p>
                       </div>
                     </div>
@@ -217,7 +207,7 @@ export default function Contact() {
                       <span className="text-white text-xl">🌐</span>
                     </div>
                     <h3 className="text-xl font-bold text-slate-800 dark:text-slate-100 transition-colors duration-300">
-                      Follow Me
+                      {t('followMe')}
                     </h3>
                   </div>
                   <div className="grid grid-cols-3 gap-4">
@@ -251,8 +241,7 @@ export default function Contact() {
                   </div>
                   <div className="mt-6 p-4 bg-gradient-to-r from-teal-50 to-purple-50 dark:from-teal-900/30 dark:to-purple-900/30 rounded-2xl border border-teal-200/50 dark:border-teal-700/50 transition-colors duration-300">
                     <p className="text-sm text-slate-600 dark:text-slate-300 text-center transition-colors duration-300">
-                      💡 <strong>Pro tip:</strong> Follow me on GitHub to see my
-                      latest projects and contributions!
+                      {t('proTip')}
                     </p>
                   </div>
                 </div>
@@ -269,7 +258,7 @@ export default function Contact() {
                       <Send className="text-white" size={24} />
                     </div>
                     <h2 className="text-2xl font-bold text-slate-800 dark:text-slate-100 transition-colors duration-300">
-                      Send Me a Message
+                      {t('sendMeMessage')}
                     </h2>
                   </div>
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -279,7 +268,7 @@ export default function Contact() {
                           htmlFor="name"
                           className="block text-sm font-semibold text-slate-700 dark:text-slate-200 mb-2 transition-colors duration-300"
                         >
-                          Name *
+                          {t('nameLabel')} *
                         </label>
                         <input
                           type="text"
@@ -289,7 +278,7 @@ export default function Contact() {
                           onChange={handleChange}
                           required
                           className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-xl focus:ring-2 focus:ring-teal-500 dark:focus:ring-teal-400 focus:border-transparent transition-all duration-300 bg-white/80 dark:bg-slate-700/50 backdrop-blur-sm hover:bg-white dark:hover:bg-slate-700/70 group-hover/input:shadow-md text-slate-800 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400"
-                          placeholder="Your name"
+                          placeholder={t('yourName')}
                         />
                       </div>
                       <div className="group/input">
@@ -297,7 +286,7 @@ export default function Contact() {
                           htmlFor="email"
                           className="block text-sm font-semibold text-slate-700 dark:text-slate-200 mb-2 transition-colors duration-300"
                         >
-                          Email *
+                          {t('emailLabel')} *
                         </label>
                         <input
                           type="email"
@@ -307,7 +296,7 @@ export default function Contact() {
                           onChange={handleChange}
                           required
                           className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-xl focus:ring-2 focus:ring-teal-500 dark:focus:ring-teal-400 focus:border-transparent transition-all duration-300 bg-white/80 dark:bg-slate-700/50 backdrop-blur-sm hover:bg-white dark:hover:bg-slate-700/70 group-hover/input:shadow-md text-slate-800 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400"
-                          placeholder="your.email@example.com"
+                          placeholder={t('yourEmail')}
                         />
                       </div>
                     </div>
@@ -317,7 +306,7 @@ export default function Contact() {
                         htmlFor="subject"
                         className="block text-sm font-semibold text-slate-700 dark:text-slate-200 mb-2 transition-colors duration-300"
                       >
-                        Subject *
+                        {t('subjectLabel')} *
                       </label>
                       <input
                         type="text"
@@ -327,7 +316,7 @@ export default function Contact() {
                         onChange={handleChange}
                         required
                         className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-xl focus:ring-2 focus:ring-teal-500 dark:focus:ring-teal-400 focus:border-transparent transition-all duration-300 bg-white/80 dark:bg-slate-700/50 backdrop-blur-sm hover:bg-white dark:hover:bg-slate-700/70 group-hover/input:shadow-md text-slate-800 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400"
-                        placeholder="What's this about?"
+                        placeholder={t('subjectPlaceholder')}
                       />
                     </div>
 
@@ -336,7 +325,7 @@ export default function Contact() {
                         htmlFor="message"
                         className="block text-sm font-semibold text-slate-700 dark:text-slate-200 mb-2 transition-colors duration-300"
                       >
-                        Message *
+                        {t('messageLabel')} *
                       </label>
                       <textarea
                         id="message"
@@ -346,7 +335,7 @@ export default function Contact() {
                         required
                         rows={6}
                         className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-xl focus:ring-2 focus:ring-teal-500 dark:focus:ring-teal-400 focus:border-transparent transition-all duration-300 resize-none bg-white/80 dark:bg-slate-700/50 backdrop-blur-sm hover:bg-white dark:hover:bg-slate-700/70 group-hover/input:shadow-md text-slate-800 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400"
-                        placeholder="Tell me about your project or just say hello!"
+                        placeholder={t('messagePlaceholder')}
                       />
                     </div>
 
@@ -406,12 +395,12 @@ export default function Contact() {
                       {isSubmitting ? (
                         <>
                           <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2 relative z-10"></div>
-                          <span className="relative z-10">Sending...</span>
+                          <span className="relative z-10">{t('sending')}</span>
                         </>
                       ) : (
                         <>
                           <Send className="mr-2 relative z-10" size={20} />
-                          <span className="relative z-10">Send Message</span>
+                          <span className="relative z-10">{t('sendMessage')}</span>
                         </>
                       )}
                     </button>
@@ -432,12 +421,10 @@ export default function Contact() {
                   </div>
                 </div>
                 <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                  Ready to Start a Project?
+                  {t('readyToStart')}
                 </h2>
                 <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
-                  I'm always excited to work on new and challenging projects.
-                  Let's discuss how we can bring your ideas to life and create
-                  something amazing together!
+                  {t('excitedToWork')}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
                   <button
@@ -448,24 +435,23 @@ export default function Contact() {
                         block: "center",
                       });
                     }}
-                    className="group inline-flex items-center px-8 py-4 bg-white/20 dark:bg-white/30 backdrop-blur-sm text-white font-semibold rounded-xl hover:bg-white/30 dark:hover:bg-white/40 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 border border-white/20 dark:border-white/30 hover:border-white/40 dark:hover:border-white/50"
-                  >
-                    <Mail
-                      className="mr-2 group-hover:scale-110 transition-transform duration-300"
-                      size={20}
-                    />
-                    Start a Conversation
-                  </button>
-                  <a
-                    href="tel:+21695650081"
-                    className="group inline-flex items-center px-8 py-4 bg-transparent text-white font-semibold rounded-xl hover:bg-white/10 dark:hover:bg-white/20 transition-all duration-300 border-2 border-white/30 dark:border-white/40 hover:border-white/50 dark:hover:border-white/60 transform hover:-translate-y-1"
-                  >
-                    <Phone
-                      className="mr-2 group-hover:scale-110 transition-transform duration-300"
-                      size={20}
-                    />
-                    Call Me
-                  </a>
+                    className="group inline-flex items-center px-8 py-4 bg-white/20 dark:bg-white/30 backdrop-blur-sm text-white font-semibold rounded-xl hover:bg-white/30 dark:hover:bg-white/40 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 border border-white/20 dark:border-white/30 hover:border-white/40 dark:hover:border-white/50"                    >
+                      <Mail
+                        className="mr-2 group-hover:scale-110 transition-transform duration-300"
+                        size={20}
+                      />
+                      {t('startConversation')}
+                    </button>
+                    <a
+                      href="tel:+21695650081"
+                      className="group inline-flex items-center px-8 py-4 bg-transparent text-white font-semibold rounded-xl hover:bg-white/10 dark:hover:bg-white/20 transition-all duration-300 border-2 border-white/30 dark:border-white/40 hover:border-white/50 dark:hover:border-white/60 transform hover:-translate-y-1"
+                    >
+                      <Phone
+                        className="mr-2 group-hover:scale-110 transition-transform duration-300"
+                        size={20}
+                      />
+                      {t('callMe')}
+                    </a>
                 </div>
               </div>
             </div>

@@ -76,7 +76,7 @@ export default function About() {
                   <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-teal-600 dark:from-teal-400 dark:to-teal-500 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-teal-500/25 dark:shadow-teal-400/25">
                     <Users className="text-white" size={24} />
                   </div>
-                  My Story
+                  {t('myStory')}
                 </h2>
                 <div className="prose prose-lg text-slate-600 dark:text-slate-200 max-w-none space-y-6 transition-colors duration-300">
                   <p className="text-base sm:text-lg leading-relaxed">
@@ -122,7 +122,7 @@ export default function About() {
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 dark:from-purple-400 dark:to-purple-500 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-500/25 dark:shadow-purple-400/25">
                     <Palette className="text-white" size={24} />
                   </div>
-                  Soft Skills
+                  {t('softSkills')}
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {skills.soft.map((skill, index) => (
@@ -148,15 +148,14 @@ export default function About() {
                 <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-teal-500/10 to-purple-500/10 dark:from-teal-400/20 dark:to-purple-400/20 rounded-full border border-teal-200/50 dark:border-teal-700/50 backdrop-blur-sm mb-6 transition-all duration-300">
                   <Zap className="mr-2 text-teal-600 dark:text-teal-400 transition-colors duration-300" size={20} />
                   <span className="text-sm font-medium text-teal-700 dark:text-teal-300 transition-colors duration-300">
-                    Core Values
+                    {t('coreValues')}
                   </span>
                 </div>
                 <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 mb-4 transition-colors duration-300">
-                  What Drives Me
+                  {t('whatDrivesMe')}
                 </h2>
                 <p className="text-lg text-slate-600 dark:text-slate-200 max-w-2xl mx-auto transition-colors duration-300">
-                  These principles guide my approach to development and
-                  collaboration
+                  {t('principlesGuide')}
                 </p>
               </div>
 
@@ -169,11 +168,10 @@ export default function About() {
                     <div className="absolute -inset-2 bg-gradient-to-r from-teal-400 to-teal-600 dark:from-teal-500 dark:to-teal-400 rounded-2xl blur opacity-20 dark:opacity-10 group-hover:opacity-40 dark:group-hover:opacity-20 transition-opacity duration-300"></div>
                   </div>
                   <h3 className="text-xl font-bold text-slate-800 dark:text-slate-100 mb-4 group-hover:text-teal-700 dark:group-hover:text-teal-300 transition-colors duration-300">
-                    Innovation
+                    {t('innovation')}
                   </h3>
                   <p className="text-slate-600 dark:text-slate-200 leading-relaxed transition-colors duration-300">
-                    Always exploring new technologies and pushing the boundaries
-                    of what's possible
+                    {t('innovationDesc')}
                   </p>
                 </div>
 
@@ -185,11 +183,10 @@ export default function About() {
                     <div className="absolute -inset-2 bg-gradient-to-r from-purple-400 to-purple-600 dark:from-purple-500 dark:to-purple-400 rounded-2xl blur opacity-20 dark:opacity-10 group-hover:opacity-40 dark:group-hover:opacity-20 transition-opacity duration-300"></div>
                   </div>
                   <h3 className="text-xl font-bold text-slate-800 dark:text-slate-100 mb-4 group-hover:text-purple-700 dark:group-hover:text-purple-300 transition-colors duration-300">
-                    Problem Solving
+                    {t('problemSolving')}
                   </h3>
                   <p className="text-slate-600 dark:text-slate-200 leading-relaxed transition-colors duration-300">
-                    Finding elegant solutions to complex challenges through
-                    creative thinking
+                    {t('problemSolvingDesc')}
                   </p>
                 </div>
 
@@ -201,11 +198,10 @@ export default function About() {
                     <div className="absolute -inset-2 bg-gradient-to-r from-teal-400 to-purple-400 dark:from-teal-500 dark:to-purple-500 rounded-2xl blur opacity-20 dark:opacity-10 group-hover:opacity-40 dark:group-hover:opacity-20 transition-opacity duration-300"></div>
                   </div>
                   <h3 className="text-xl font-bold text-slate-800 dark:text-slate-100 mb-4 group-hover:text-teal-700 dark:group-hover:text-teal-300 transition-colors duration-300">
-                    Collaboration
+                    {t('collaboration')}
                   </h3>
                   <p className="text-slate-600 dark:text-slate-200 leading-relaxed transition-colors duration-300">
-                    Working together with teams to create impactful and
-                    meaningful projects
+                    {t('collaborationDesc')}
                   </p>
                 </div>
               </div>

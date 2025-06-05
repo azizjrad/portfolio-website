@@ -98,7 +98,6 @@ export default function Projects() {
             </h1>
             <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-200 leading-relaxed max-w-3xl mx-auto transition-colors duration-300">
               {t("projectsSubtitle")}
-              project represents a unique challenge and learning experience.
             </p>
           </div>
 
@@ -109,7 +108,7 @@ export default function Projects() {
                 <span className="text-white text-2xl">⭐</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 animate-slide-up transition-colors duration-300">
-                Featured Projects
+                {t('featuredProjects')}
               </h2>
             </div>
             <div className="grid lg:grid-cols-2 gap-8">
@@ -181,7 +180,7 @@ export default function Projects() {
                           size={16}
                           className="mr-2 relative z-10"
                         />
-                        <span className="relative z-10">Live Demo</span>
+                        <span className="relative z-10">{t('liveDemo')}</span>
                       </a>
                       <a
                         href={project.githubUrl}
@@ -190,7 +189,7 @@ export default function Projects() {
                         className="group/btn inline-flex items-center px-6 py-3 border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 font-medium rounded-xl hover:border-slate-400 dark:hover:border-slate-500 hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-md"
                       >
                         <Github size={16} className="mr-2" />
-                        View Code
+                        {t('viewCode')}
                       </a>
                     </div>
                   </div>
@@ -208,7 +207,7 @@ export default function Projects() {
                   <span className="text-white text-2xl">💼</span>
                 </div>
                 <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 animate-slide-up transition-colors duration-300">
-                  Other Projects
+                  {t('otherProjects')}
                 </h2>
               </div>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -287,7 +286,7 @@ export default function Projects() {
                             size={12}
                             className="mr-1 relative z-10"
                           />
-                          <span className="relative z-10">Demo</span>
+                          <span className="relative z-10">{t('demo')}</span>
                         </a>
                         <a
                           href={project.githubUrl}
@@ -296,7 +295,7 @@ export default function Projects() {
                           className="flex-1 inline-flex items-center justify-center px-3 py-2 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 text-sm font-medium rounded-lg hover:border-slate-400 dark:hover:border-slate-500 hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-md"
                         >
                           <Github size={12} className="mr-1" />
-                          Code
+                          {t('code')}
                         </a>
                       </div>
                     </div>
