@@ -7,6 +7,7 @@ import Footer from "@/components/footer";
 import BackToTop from "@/components/back-to-top";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,6 +32,7 @@ export default function RootLayout({
           <Footer />
           <BackToTop />
           <SpeedInsights />
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>

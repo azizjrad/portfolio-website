@@ -17,7 +17,7 @@ const projects = [
     id: 2,
     title: "Modern Business Intelligence App",
     description:
-      "Forge Insight Dashboard is a modern Business Intelligence (BI) web application designed to provide real-time analytics and interactive data visualization for hospitality and service-based businesses. The platform helps users monitor performance metrics, understand customer behavior, and make data-driven decisions through a clean and intuitive interface.",
+      "InsightForge Dashboard is a modern Business Intelligence (BI) web application designed to provide real-time analytics and interactive data visualization for hospitality and service-based businesses. The platform helps users monitor performance metrics, understand customer behavior, and make data-driven decisions through a clean and intuitive interface.",
     image: "/insightforge.png",
     technologies: [
       "React",
