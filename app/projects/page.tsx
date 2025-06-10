@@ -7,6 +7,23 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const projects = [
   {
     id: 1,
+    title: "Digital News Journal",
+    description:
+      "A modern, full-stack news website supporting Arabic and English content with real-time analytics and comprehensive admin management. Features bilingual content management with RTL/LTR support, advanced search functionality, and a dark-themed admin dashboard with glass morphism design. Built with performance optimization, secure authentication, and SEO-friendly architecture for professional news publishing.",
+    image: "/akhbarna.png",
+    technologies: [
+      "Next.js 14",
+      "TypeScript",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Node.js",
+    ],
+    liveUrl: "https://journal-ppom.vercel.app/",
+    githubUrl: "https://github.com/azizjrad/journal",
+    featured: true,
+  },
+  {
+    id: 2,
     title: "E-Commerce Platform",
     description:
       "Esouk Tounsi is a simple e-commerce web application built to showcase local Tunisian products and promote digital adoption among small local merchants. The platform simulates an online marketplace where users can browse products by category, view product details, and simulate a shopping experience through a clean PHP-based interface.",
@@ -17,7 +34,7 @@ const projects = [
     featured: true,
   },
   {
-    id: 2,
+    id: 3,
     title: "Modern Business Intelligence App",
     description:
       "InsightForge Dashboard is a modern Business Intelligence (BI) web application designed to provide real-time analytics and interactive data visualization for hospitality and service-based businesses. The platform helps users monitor performance metrics, understand customer behavior, and make data-driven decisions through a clean and intuitive interface.",
@@ -108,7 +125,7 @@ export default function Projects() {
                 <span className="text-white text-2xl">⭐</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 animate-slide-up transition-colors duration-300">
-                {t('featuredProjects')}
+                {t("featuredProjects")}
               </h2>
             </div>
             <div className="grid lg:grid-cols-2 gap-8">
@@ -180,7 +197,7 @@ export default function Projects() {
                           size={16}
                           className="mr-2 relative z-10"
                         />
-                        <span className="relative z-10">{t('liveDemo')}</span>
+                        <span className="relative z-10">{t("liveDemo")}</span>
                       </a>
                       <a
                         href={project.githubUrl}
@@ -189,7 +206,7 @@ export default function Projects() {
                         className="group/btn inline-flex items-center px-6 py-3 border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 font-medium rounded-xl hover:border-slate-400 dark:hover:border-slate-500 hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-md"
                       >
                         <Github size={16} className="mr-2" />
-                        {t('viewCode')}
+                        {t("viewCode")}
                       </a>
                     </div>
                   </div>
@@ -207,7 +224,7 @@ export default function Projects() {
                   <span className="text-white text-2xl">💼</span>
                 </div>
                 <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 animate-slide-up transition-colors duration-300">
-                  {t('otherProjects')}
+                  {t("otherProjects")}
                 </h2>
               </div>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -286,7 +303,7 @@ export default function Projects() {
                             size={12}
                             className="mr-1 relative z-10"
                           />
-                          <span className="relative z-10">{t('demo')}</span>
+                          <span className="relative z-10">{t("demo")}</span>
                         </a>
                         <a
                           href={project.githubUrl}
@@ -295,7 +312,7 @@ export default function Projects() {
                           className="flex-1 inline-flex items-center justify-center px-3 py-2 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 text-sm font-medium rounded-lg hover:border-slate-400 dark:hover:border-slate-500 hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-md"
                         >
                           <Github size={12} className="mr-1" />
-                          {t('code')}
+                          {t("code")}
                         </a>
                       </div>
                     </div>
