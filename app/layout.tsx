@@ -17,6 +17,15 @@ export const metadata: Metadata = {
   description:
     "Passionate developer creating beautiful, functional, and user-centered digital experiences",
   generator: "v0.dev",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "16x16", type: "image/x-icon" }
+    ],
+    apple: [
+      { url: "/favicon.svg", sizes: "180x180", type: "image/svg+xml" }
+    ],
+  },
 };
 
 export default function RootLayout({
