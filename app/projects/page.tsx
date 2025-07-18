@@ -52,17 +52,6 @@ const projects = [
     featured: true,
   },
   {
-    id: 4,
-    title: "Portfolio Website",
-    description:
-      "A modern, responsive portfolio website showcasing my work with smooth animations and optimized performance.",
-    image: "/portfolio.png",
-    technologies: ["Next.js", "Tailwind CSS"],
-    liveUrl: "https://portfolio-website-five-brown.vercel.app/",
-    githubUrl: "https://github.com/azizjrad/portfolio-website",
-    featured: false,
-  },
-  {
     id: 5,
     title: "Simon Game",
     description:
@@ -83,15 +72,127 @@ export default function Projects() {
   return (
     <div className="pt-24 relative overflow-hidden transition-colors duration-300">
       {/* Background Elements */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 left-1/4 w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 bg-teal-400 dark:bg-teal-500 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-xl opacity-20 dark:opacity-10 animate-float transition-colors duration-300"></div>
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        {/* Animated gradient orbs */}
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-gradient-to-r from-teal-400 to-cyan-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
         <div
-          className="absolute top-3/4 right-1/4 w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 bg-purple-400 dark:bg-purple-500 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-xl opacity-20 dark:opacity-10 animate-float transition-colors duration-300"
+          className="absolute top-3/4 right-1/4 w-64 h-64 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"
           style={{ animationDelay: "2s" }}
         ></div>
         <div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 bg-gradient-to-r from-teal-300 to-purple-300 dark:from-teal-400 dark:to-purple-400 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-2xl opacity-10 dark:opacity-5 animate-float transition-colors duration-300"
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-indigo-300 to-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-10 animate-pulse"
           style={{ animationDelay: "4s" }}
+        ></div>
+
+        {/* Floating geometric shapes - moving like stars */}
+        <div
+          className="absolute top-20 left-20 w-4 h-4 bg-teal-500 rounded-full animate-float opacity-60"
+          style={{ animationDuration: "6s" }}
+        ></div>
+        <div
+          className="absolute top-40 right-32 w-6 h-6 bg-purple-500 rotate-45 animate-drift opacity-40"
+          style={{ animationDelay: "1s", animationDuration: "20s" }}
+        ></div>
+        <div
+          className="absolute bottom-32 left-1/3 w-3 h-3 bg-cyan-500 rounded-full animate-spiral opacity-50"
+          style={{ animationDelay: "3s", animationDuration: "12s" }}
+        ></div>
+        <div
+          className="absolute top-1/3 right-20 w-8 h-8 bg-gradient-to-r from-teal-400 to-purple-400 rounded-full animate-cosmic opacity-30"
+          style={{ animationDelay: "5s", animationDuration: "25s" }}
+        ></div>
+
+        {/* Additional moving stars with varied animations */}
+        <div
+          className="absolute top-1/2 left-16 w-2 h-2 bg-yellow-400 rounded-full animate-twinkle opacity-70"
+          style={{ animationDelay: "2s", animationDuration: "4s" }}
+        ></div>
+        <div
+          className="absolute top-3/4 right-1/3 w-5 h-5 bg-indigo-400 rounded-full animate-orbit opacity-50"
+          style={{ animationDelay: "4s", animationDuration: "15s" }}
+        ></div>
+        <div
+          className="absolute bottom-1/4 left-1/2 w-3 h-3 bg-pink-400 rounded-full animate-starfield opacity-60"
+          style={{ animationDelay: "6s", animationDuration: "8s" }}
+        ></div>
+        <div
+          className="absolute top-1/4 right-1/2 w-4 h-4 bg-emerald-400 rounded-full animate-cosmic opacity-40"
+          style={{ animationDelay: "1.5s", animationDuration: "18s" }}
+        ></div>
+        <div
+          className="absolute bottom-1/3 right-24 w-2 h-2 bg-orange-400 rounded-full animate-twinkle opacity-80"
+          style={{ animationDelay: "3.5s", animationDuration: "3s" }}
+        ></div>
+        <div
+          className="absolute top-2/3 left-1/4 w-6 h-6 bg-violet-400 rounded-full animate-spiral opacity-35"
+          style={{ animationDelay: "7s", animationDuration: "14s" }}
+        ></div>
+
+        {/* Additional cosmic elements */}
+        <div
+          className="absolute top-16 left-1/3 w-3 h-3 bg-rose-400 rounded-full animate-drift opacity-45"
+          style={{ animationDelay: "2.5s", animationDuration: "22s" }}
+        ></div>
+        <div
+          className="absolute bottom-20 right-1/4 w-4 h-4 bg-amber-400 rounded-full animate-orbit opacity-55"
+          style={{ animationDelay: "4.5s", animationDuration: "16s" }}
+        ></div>
+        <div
+          className="absolute top-1/3 left-1/2 w-2 h-2 bg-lime-400 rounded-full animate-starfield opacity-65"
+          style={{ animationDelay: "6.5s", animationDuration: "9s" }}
+        ></div>
+        <div
+          className="absolute bottom-1/2 right-16 w-5 h-5 bg-sky-400 rounded-full animate-cosmic opacity-40"
+          style={{ animationDelay: "8s", animationDuration: "28s" }}
+        ></div>
+        <div
+          className="absolute top-3/4 left-20 w-3 h-3 bg-fuchsia-400 rounded-full animate-spiral opacity-50"
+          style={{ animationDelay: "1.8s", animationDuration: "11s" }}
+        ></div>
+
+        {/* Twinkling stars with varied sizes */}
+        <div
+          className="absolute top-32 right-16 w-1 h-1 bg-white rounded-full animate-twinkle opacity-90"
+          style={{ animationDelay: "0.5s", animationDuration: "2s" }}
+        ></div>
+        <div
+          className="absolute bottom-48 left-32 w-1 h-1 bg-white rounded-full animate-twinkle opacity-80"
+          style={{ animationDelay: "2.5s", animationDuration: "3s" }}
+        ></div>
+        <div
+          className="absolute top-48 left-1/2 w-1 h-1 bg-white rounded-full animate-twinkle opacity-70"
+          style={{ animationDelay: "4.5s", animationDuration: "2.5s" }}
+        ></div>
+        <div
+          className="absolute bottom-24 right-1/3 w-1 h-1 bg-white rounded-full animate-twinkle opacity-85"
+          style={{ animationDelay: "6.5s", animationDuration: "4s" }}
+        ></div>
+        <div
+          className="absolute top-1/4 left-24 w-1 h-1 bg-white rounded-full animate-twinkle opacity-75"
+          style={{ animationDelay: "1.2s", animationDuration: "2.8s" }}
+        ></div>
+        <div
+          className="absolute bottom-1/3 right-32 w-1 h-1 bg-white rounded-full animate-twinkle opacity-95"
+          style={{ animationDelay: "3.8s", animationDuration: "3.5s" }}
+        ></div>
+        <div
+          className="absolute top-2/3 right-1/4 w-1 h-1 bg-white rounded-full animate-twinkle opacity-65"
+          style={{ animationDelay: "5.2s", animationDuration: "2.2s" }}
+        ></div>
+        <div
+          className="absolute bottom-16 left-1/4 w-1 h-1 bg-white rounded-full animate-twinkle opacity-88"
+          style={{ animationDelay: "7.5s", animationDuration: "3.8s" }}
+        ></div>
+
+        {/* Dot pattern overlay */}
+        <div
+          className="absolute inset-0 bg-slate-900/5 opacity-20"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle, #475569 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
+            backgroundPosition: "0 0, 30px 30px",
+          }}
         ></div>
       </div>
 
@@ -99,32 +200,24 @@ export default function Projects() {
         <div className="max-w-6xl mx-auto">
           {/* Enhanced Header */}
           <div className="text-center mb-16 sm:mb-20 animate-fade-in">
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-teal-500/10 to-purple-500/10 dark:from-teal-400/20 dark:to-purple-400/20 rounded-full border border-teal-200/50 dark:border-teal-400/30 backdrop-blur-sm mb-6 transition-colors duration-300">
-              <span className="text-sm font-medium text-teal-700 dark:text-teal-300 transition-colors duration-300">
-                🚀 {t("projectsTitle")}
-              </span>
-            </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 dark:text-slate-100 mb-6 transition-colors duration-300">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 mb-6 transition-colors duration-300">
               {t("projectsTitle").split(" ")[0]}{" "}
               <span className="relative inline-block">
-                <span className="bg-gradient-to-r from-teal-600 via-purple-600 to-teal-600 dark:from-teal-400 dark:via-purple-400 dark:to-teal-400 bg-clip-text text-transparent transition-colors duration-300">
+                <span className="bg-gradient-to-r from-teal-600 via-purple-600 to-teal-600 bg-clip-text text-transparent transition-colors duration-300">
                   {t("projectsTitle").split(" ")[1] || "Projects"}
                 </span>
-                <div className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-0.5 sm:h-1 bg-gradient-to-r from-teal-400 to-purple-500 dark:from-teal-300 dark:to-purple-400 rounded-full transition-colors duration-300"></div>
+                <div className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-0.5 sm:h-1 bg-gradient-to-r from-teal-400 to-purple-500 rounded-full transition-colors duration-300"></div>
               </span>
             </h1>
-            <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-200 leading-relaxed max-w-3xl mx-auto transition-colors duration-300">
-              {t("projectsSubtitle")}
-            </p>
           </div>
 
           {/* Enhanced Featured Projects */}
           <div className="mb-16 sm:mb-20">
             <div className="flex items-center mb-12">
-              <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-teal-600 dark:from-teal-400 dark:to-teal-500 rounded-2xl flex items-center justify-center mr-4 shadow-lg shadow-teal-500/25 dark:shadow-teal-400/20 transition-colors duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center mr-4 shadow-lg shadow-teal-500/25 transition-colors duration-300">
                 <span className="text-white text-2xl">⭐</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 animate-slide-up transition-colors duration-300">
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 animate-slide-up transition-colors duration-300">
                 {t("featuredProjects")}
               </h2>
             </div>
@@ -132,10 +225,14 @@ export default function Projects() {
               {featuredProjects.map((project, index) => (
                 <div
                   key={project.id}
-                  className="group relative bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-3xl shadow-xl hover:shadow-2xl dark:shadow-2xl dark:hover:shadow-3xl transition-all duration-500 overflow-hidden border border-slate-200/50 dark:border-slate-700/50 hover:border-teal-300/50 dark:hover:border-teal-400/50 transform hover:-translate-y-3 animate-slide-up"
+                  className="group relative bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-lg rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden border border-white/30 hover:border-teal-300/50 transform hover:-translate-y-3 animate-slide-up"
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 via-transparent to-purple-500/5 dark:from-teal-400/10 dark:via-transparent dark:to-purple-400/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 via-transparent to-purple-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  {/* Glassy highlight overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl backdrop-blur-sm"></div>
+                  {/* Animated shine effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"></div>
                   <div className="relative overflow-hidden">
                     <Image
                       src={project.image || "/placeholder.svg"}
@@ -144,14 +241,14 @@ export default function Projects() {
                       height={300}
                       className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>{" "}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                       <div className="flex space-x-2">
                         <a
                           href={project.liveUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-10 h-10 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-full flex items-center justify-center text-teal-600 dark:text-teal-400 hover:bg-teal-600 dark:hover:bg-teal-500 hover:text-white transition-all duration-200 shadow-lg dark:shadow-xl"
+                          className="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-teal-600 hover:bg-teal-600 hover:text-white transition-all duration-200 shadow-lg"
                         >
                           <ExternalLink size={16} />
                         </a>
@@ -159,7 +256,7 @@ export default function Projects() {
                           href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-10 h-10 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-full flex items-center justify-center text-slate-700 dark:text-slate-300 hover:bg-slate-700 dark:hover:bg-slate-600 hover:text-white transition-all duration-200 shadow-lg dark:shadow-xl"
+                          className="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-slate-700 hover:bg-slate-700 hover:text-white transition-all duration-200 shadow-lg"
                         >
                           <Github size={16} />
                         </a>
@@ -167,21 +264,21 @@ export default function Projects() {
                     </div>
                   </div>
                   <div className="relative z-10 p-8">
-                    <h3 className="text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100 mb-4 group-hover:text-teal-700 dark:group-hover:text-teal-300 transition-colors duration-300">
+                    <h3 className="text-xl sm:text-2xl font-bold text-slate-800 mb-4 group-hover:text-teal-700 transition-colors duration-300">
                       {project.title}
                     </h3>
-                    <p className="text-slate-600 dark:text-slate-200 mb-6 leading-relaxed transition-colors duration-300">
+                    <p className="text-slate-600 mb-6 leading-relaxed transition-colors duration-300">
                       {project.description}
                     </p>
                     <div className="flex flex-wrap gap-2 mb-6">
                       {project.technologies.map((tech, techIndex) => (
                         <span
                           key={tech}
-                          className="group/tech relative px-3 py-2 bg-gradient-to-r from-teal-50 to-teal-100 dark:from-teal-900/50 dark:to-teal-800/50 hover:from-teal-100 hover:to-teal-200 dark:hover:from-teal-800/70 dark:hover:to-teal-700/70 text-teal-700 dark:text-teal-300 text-sm font-medium rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-md border border-teal-200/50 dark:border-teal-700/50 hover:border-teal-300 dark:hover:border-teal-600"
+                          className="group/tech relative px-3 py-2 bg-gradient-to-r from-teal-50 to-teal-100 hover:from-teal-100 hover:to-teal-200 text-teal-700 text-sm font-medium rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-md border border-teal-200/50 hover:border-teal-300"
                           style={{ animationDelay: `${techIndex * 0.05}s` }}
                         >
                           <span className="relative z-10">{tech}</span>
-                          <div className="absolute inset-0 bg-gradient-to-r from-teal-200/50 to-teal-300/50 dark:from-teal-700/50 dark:to-teal-600/50 rounded-xl opacity-0 group-hover/tech:opacity-100 transition-opacity duration-300"></div>
+                          <div className="absolute inset-0 bg-gradient-to-r from-teal-200/50 to-teal-300/50 rounded-xl opacity-0 group-hover/tech:opacity-100 transition-opacity duration-300"></div>
                         </span>
                       ))}
                     </div>
@@ -190,9 +287,9 @@ export default function Projects() {
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group/btn relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-teal-600 to-teal-700 dark:from-teal-500 dark:to-teal-600 text-white font-medium rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/25 dark:hover:shadow-teal-400/20 transform hover:-translate-y-1"
+                        className="group/btn relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-teal-600 to-teal-700 text-white font-medium rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/25 transform hover:-translate-y-1"
                       >
-                        <div className="absolute inset-0 bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 dark:from-teal-300 dark:via-teal-400 dark:to-teal-500 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 animate-gradient-x bg-size-300%"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 animate-gradient-x bg-size-300%"></div>
                         <ExternalLink
                           size={16}
                           className="mr-2 relative z-10"
@@ -203,7 +300,7 @@ export default function Projects() {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group/btn inline-flex items-center px-6 py-3 border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 font-medium rounded-xl hover:border-slate-400 dark:hover:border-slate-500 hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-md"
+                        className="group/btn inline-flex items-center px-6 py-3 border-2 border-slate-300 text-slate-700 font-medium rounded-xl hover:border-slate-400 hover:bg-slate-50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-md"
                       >
                         <Github size={16} className="mr-2" />
                         {t("viewCode")}
@@ -216,14 +313,14 @@ export default function Projects() {
           </div>
 
           {/* Enhanced Other Projects */}
-          <div className="relative bg-gradient-to-br from-slate-50 via-white to-slate-50 dark:from-slate-800/50 dark:via-slate-800/80 dark:to-slate-800/50 rounded-3xl p-8 md:p-12 animate-slide-up shadow-xl dark:shadow-2xl border border-slate-200/50 dark:border-slate-700/50 transition-colors duration-300">
-            <div className="absolute inset-0 bg-gradient-to-r from-teal-600/5 via-purple-600/5 to-teal-600/5 dark:from-teal-400/10 dark:via-purple-400/10 dark:to-teal-400/10 rounded-3xl transition-colors duration-300"></div>
+          <div className="relative bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-lg rounded-3xl p-8 md:p-12 animate-slide-up shadow-2xl border border-white/30 transition-colors duration-300">
+            <div className="absolute inset-0 bg-gradient-to-r from-teal-600/5 via-purple-600/5 to-teal-600/5 rounded-3xl transition-colors duration-300"></div>
             <div className="relative z-10">
               <div className="flex items-center mb-12">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 dark:from-purple-400 dark:to-purple-500 rounded-2xl flex items-center justify-center mr-4 shadow-lg shadow-purple-500/25 dark:shadow-purple-400/20 transition-colors duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mr-4 shadow-lg shadow-purple-500/25 transition-colors duration-300">
                   <span className="text-white text-2xl">💼</span>
                 </div>
-                <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 animate-slide-up transition-colors duration-300">
+                <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 animate-slide-up transition-colors duration-300">
                   {t("otherProjects")}
                 </h2>
               </div>
@@ -231,10 +328,14 @@ export default function Projects() {
                 {otherProjects.map((project, index) => (
                   <div
                     key={project.id}
-                    className="group relative bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl dark:shadow-xl dark:hover:shadow-2xl overflow-hidden transition-all duration-500 border border-slate-200/50 dark:border-slate-700/50 hover:border-purple-300/50 dark:hover:border-purple-400/50 transform hover:-translate-y-2 animate-slide-up"
+                    className="group relative bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-lg rounded-2xl shadow-lg hover:shadow-xl overflow-hidden transition-all duration-500 border border-white/30 hover:border-purple-300/50 transform hover:-translate-y-2 animate-slide-up"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-teal-500/5 dark:from-purple-400/10 dark:via-transparent dark:to-teal-400/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-teal-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    {/* Glassy highlight overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl backdrop-blur-sm"></div>
+                    {/* Animated shine effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"></div>
                     <div className="relative overflow-hidden">
                       <Image
                         src={project.image || "/placeholder.svg"}
@@ -250,7 +351,7 @@ export default function Projects() {
                             href={project.liveUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-8 h-8 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-full flex items-center justify-center text-teal-600 dark:text-teal-400 hover:bg-teal-600 dark:hover:bg-teal-500 hover:text-white transition-all duration-200 shadow-md dark:shadow-lg"
+                            className="w-8 h-8 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-teal-600 hover:bg-teal-600 hover:text-white transition-all duration-200 shadow-md"
                           >
                             <ExternalLink size={12} />
                           </a>
@@ -258,7 +359,7 @@ export default function Projects() {
                             href={project.githubUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-8 h-8 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-full flex items-center justify-center text-slate-700 dark:text-slate-300 hover:bg-slate-700 dark:hover:bg-slate-600 hover:text-white transition-all duration-200 shadow-md dark:shadow-lg"
+                            className="w-8 h-8 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-slate-700 hover:bg-slate-700 hover:text-white transition-all duration-200 shadow-md"
                           >
                             <Github size={12} />
                           </a>
@@ -266,10 +367,10 @@ export default function Projects() {
                       </div>
                     </div>
                     <div className="relative z-10 p-5">
-                      <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100 mb-3 group-hover:text-purple-700 dark:group-hover:text-purple-300 transition-colors duration-300">
+                      <h3 className="text-lg font-bold text-slate-800 mb-3 group-hover:text-purple-700 transition-colors duration-300">
                         {project.title}
                       </h3>
-                      <p className="text-slate-600 dark:text-slate-200 text-sm mb-4 leading-relaxed line-clamp-3 transition-colors duration-300">
+                      <p className="text-slate-600 text-sm mb-4 leading-relaxed line-clamp-3 transition-colors duration-300">
                         {project.description}
                       </p>
                       <div className="flex flex-wrap gap-1 mb-4">
@@ -278,15 +379,15 @@ export default function Projects() {
                           .map((tech, techIndex) => (
                             <span
                               key={tech}
-                              className="group/tech relative px-2 py-1 bg-gradient-to-r from-purple-50 to-purple-100 dark:from-purple-900/50 dark:to-purple-800/50 hover:from-purple-100 hover:to-purple-200 dark:hover:from-purple-800/70 dark:hover:to-purple-700/70 text-purple-700 dark:text-purple-300 text-xs font-medium rounded-lg transition-all duration-300 transform hover:-translate-y-0.5 border border-purple-200/50 dark:border-purple-700/50 hover:border-purple-300 dark:hover:border-purple-600"
+                              className="group/tech relative px-2 py-1 bg-gradient-to-r from-purple-50 to-purple-100 hover:from-purple-100 hover:to-purple-200 text-purple-700 text-xs font-medium rounded-lg transition-all duration-300 transform hover:-translate-y-0.5 border border-purple-200/50 hover:border-purple-300"
                               style={{ animationDelay: `${techIndex * 0.05}s` }}
                             >
                               <span className="relative z-10">{tech}</span>
-                              <div className="absolute inset-0 bg-gradient-to-r from-purple-200/50 to-purple-300/50 dark:from-purple-700/50 dark:to-purple-600/50 rounded-lg opacity-0 group-hover/tech:opacity-100 transition-opacity duration-300"></div>
+                              <div className="absolute inset-0 bg-gradient-to-r from-purple-200/50 to-purple-300/50 rounded-lg opacity-0 group-hover/tech:opacity-100 transition-opacity duration-300"></div>
                             </span>
                           ))}
                         {project.technologies.length > 3 && (
-                          <span className="px-2 py-1 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-600 dark:text-slate-300 text-xs font-medium rounded-lg transition-colors duration-200">
+                          <span className="px-2 py-1 bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs font-medium rounded-lg transition-colors duration-200">
                             +{project.technologies.length - 3}
                           </span>
                         )}
@@ -296,9 +397,9 @@ export default function Projects() {
                           href={project.liveUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="group/btn relative flex-1 inline-flex items-center justify-center px-3 py-2 bg-gradient-to-r from-teal-600 to-teal-700 dark:from-teal-500 dark:to-teal-600 text-white text-sm font-medium rounded-lg overflow-hidden transition-all duration-300 hover:shadow-md hover:shadow-teal-500/25 dark:hover:shadow-teal-400/20 transform hover:-translate-y-0.5"
+                          className="group/btn relative flex-1 inline-flex items-center justify-center px-3 py-2 bg-gradient-to-r from-teal-600 to-teal-700 text-white text-sm font-medium rounded-lg overflow-hidden transition-all duration-300 hover:shadow-md hover:shadow-teal-500/25 transform hover:-translate-y-0.5"
                         >
-                          <div className="absolute inset-0 bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 dark:from-teal-300 dark:via-teal-400 dark:to-teal-500 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 animate-gradient-x bg-size-300%"></div>
+                          <div className="absolute inset-0 bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 animate-gradient-x bg-size-300%"></div>
                           <ExternalLink
                             size={12}
                             className="mr-1 relative z-10"
@@ -309,7 +410,7 @@ export default function Projects() {
                           href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex-1 inline-flex items-center justify-center px-3 py-2 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 text-sm font-medium rounded-lg hover:border-slate-400 dark:hover:border-slate-500 hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-md"
+                          className="flex-1 inline-flex items-center justify-center px-3 py-2 border border-slate-300 text-slate-700 text-sm font-medium rounded-lg hover:border-slate-400 hover:bg-slate-50 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-md"
                         >
                           <Github size={12} className="mr-1" />
                           {t("code")}

@@ -25,7 +25,7 @@ const translations = {
     contact: "Contact", // Home page
     heroTitle: "Passionate Developer",
     heroSubtitle:
-      "I create beautiful, functional, and user-centered digital experiences that bridge the gap between design and technology.",
+      "Business Computing student specializing in E-Business, with hands-on experience in frontend development and a strong interest in Business Intelligence. Skilled in creating clean, user-friendly web interfaces with a focus on UI/UX design and strategic problem-solving. Passionate about combining technology, design, and data to build solutions that address real-world business needs.",
     getInTouch: "Get in Touch",
     viewMyWork: "View My Work",
     greeting: "Hi, I'm",
@@ -36,7 +36,7 @@ const translations = {
     aboutSubtitle:
       "Passionate developer with a love for creating innovative solutions",
     aboutDescription:
-      "I'm a dedicated developer with a passion for creating digital experiences that make a difference. With expertise in modern web technologies and a keen eye for design, I strive to build applications that are not only functional but also beautiful and intuitive.",
+      "I'm Aziz Jrad a Business Computing student from Tunisia, currently focusing on E-Business. I'm passionate about technology and enjoy exploring how strategy, data, and design can work together to solve real-world problems. Whether it's building clean, intuitive interfaces or using data to drive smarter decisions, I'm driven by the idea of creating meaningful, practical solutions.",
     skillsTitle: "Skills & Technologies",
     experienceTitle: "Experience",
     myStory: "My Story",
@@ -57,7 +57,6 @@ const translations = {
 
     // Projects page
     projectsTitle: "My Projects",
-    projectsSubtitle: "A showcase of my recent work and creative solutions",
     viewLive: "View Live",
     viewCode: "View Code",
     featuredProjects: "Featured Projects",
@@ -105,7 +104,7 @@ const translations = {
     resumeTitle: "Resume",
     resumeSubtitle:
       "A comprehensive overview of my professional experience, education, and skills",
-    downloadPdf: "Download PDF Resume",
+    downloadPdf: "Download My Resume",
     myResume: "My Resume",
     email: "Email",
     phone: "Phone",
@@ -143,7 +142,7 @@ const translations = {
     contact: "Contact", // Home page
     heroTitle: "Développeur Passionné",
     heroSubtitle:
-      "Je crée des expériences numériques belles, fonctionnelles et centrées sur l'utilisateur qui font le pont entre le design et la technologie.",
+      "Étudiant en Informatique de Gestion spécialisé en E-Business, avec une expérience pratique en développement frontend et un fort intérêt pour l'Intelligence d'Affaires. Compétent dans la création d'interfaces web propres et conviviales avec un focus sur la conception UI/UX et la résolution stratégique de problèmes. Passionné par la combinaison de la technologie, du design et des données pour créer des solutions qui répondent aux besoins commerciaux réels.",
     getInTouch: "Prenez Contact",
     viewMyWork: "Voir Mon Travail",
     greeting: "Salut, je suis",
@@ -154,7 +153,7 @@ const translations = {
     aboutSubtitle:
       "Développeur passionné avec un amour pour créer des solutions innovantes",
     aboutDescription:
-      "Je suis un développeur dévoué avec une passion pour créer des expériences numériques qui font la différence. Avec une expertise dans les technologies web modernes et un œil attentif au design, je m'efforce de construire des applications qui sont non seulement fonctionnelles mais aussi belles et intuitives.",
+      "Je suis Aziz Jrad un étudiant en Informatique de Gestion de Tunisie, actuellement spécialisé en E-Business. Je suis passionné par la technologie et j'aime explorer comment la stratégie, les données et le design peuvent travailler ensemble pour résoudre des problèmes du monde réel. Que ce soit pour créer des interfaces propres et intuitives ou utiliser les données pour prendre des décisions plus intelligentes, je suis motivé par l'idée de créer des solutions significatives et pratiques.",
     skillsTitle: "Compétences & Technologies",
     experienceTitle: "Expérience",
     myStory: "Mon Histoire",
@@ -175,8 +174,6 @@ const translations = {
 
     // Projects page
     projectsTitle: "Mes Projets",
-    projectsSubtitle:
-      "Une vitrine de mon travail récent et de mes solutions créatives",
     viewLive: "Voir En Direct",
     viewCode: "Voir le Code",
     featuredProjects: "Projets Vedettes",
@@ -226,7 +223,7 @@ const translations = {
     resumeTitle: "CV",
     resumeSubtitle:
       "Un aperçu complet de mon expérience professionnelle, de mon éducation et de mes compétences",
-    downloadPdf: "Télécharger CV PDF",
+    downloadPdf: "Télécharger Mon CV",
     myResume: "Mon CV",
     email: "Email",
     phone: "Téléphone",

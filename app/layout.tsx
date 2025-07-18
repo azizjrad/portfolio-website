@@ -5,7 +5,6 @@ import "./globals.css";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import BackToTop from "@/components/back-to-top";
-import { ThemeProvider } from "@/contexts/ThemeContext";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
@@ -20,11 +19,9 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon.ico", sizes: "16x16", type: "image/x-icon" }
+      { url: "/favicon.ico", sizes: "16x16", type: "image/x-icon" },
     ],
-    apple: [
-      { url: "/favicon.svg", sizes: "180x180", type: "image/svg+xml" }
-    ],
+    apple: [{ url: "/favicon.svg", sizes: "180x180", type: "image/svg+xml" }],
   },
 };
 
@@ -36,16 +33,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ThemeProvider>
-          <LanguageProvider>
-            <Navigation />
-            <main className="min-h-screen">{children}</main>
-            <Footer />
-            <BackToTop />
-            <SpeedInsights />
-            <Analytics />
-          </LanguageProvider>
-        </ThemeProvider>
+        <LanguageProvider>
+          <Navigation />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+          <BackToTop />
+          <SpeedInsights />
+          <Analytics />
+        </LanguageProvider>
       </body>
     </html>
   );
