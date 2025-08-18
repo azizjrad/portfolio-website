@@ -74,7 +74,16 @@ const projectDescriptionsFr: Record<number, string> = {
   2: "T4Translation est un site web bilingue moderne (anglais/arabe) construit pour un service de traduction et de localisation. Il est conçu avec une expérience utilisateur rapide et mobile-first à l'esprit, avec un support complet droite-à-gauche (RTL) et une interface utilisateur propre et cohérente. Le site utilise React i18next pour l'internationalisation, permettant un changement de langue fluide avec un bouton AR/ENG persistant et des tableaux de contenu dynamiques. Les sections clés incluent des pages de services détaillées, une vitrine \"Domaines d'expertise\", et deux formulaires entièrement validés (Contact et Commencer) alimentés par EmailJS, avec des états de focus et de survol fluides pour une meilleure utilisabilité. Côté technique, le projet est optimisé pour le SEO avec des balises meta et des données JSON-LD structurées, le rendant à la fois convivial et prêt pour les moteurs de recherche.",
   3: "Esouk Tounsi est une application web e-commerce construite pour présenter les produits locaux tunisiens et promouvoir l'adoption numérique parmi les petits commerçants locaux. La plateforme simule une marketplace en ligne où les utilisateurs peuvent parcourir les produits par catégorie, voir les détails des produits et simuler une expérience d'achat à travers une interface PHP propre.",
   4: "InsightForge Dashboard est une application web moderne de Business Intelligence (BI) conçue pour fournir des analyses en temps réel et une visualisation de données interactive pour les entreprises d'hôtellerie et de services. La plateforme aide les utilisateurs à surveiller les métriques de performance, comprendre le comportement des clients et prendre des décisions basées sur les données à travers une interface propre et intuitive.",
-  5: "Un jeu de mémoire classique où les joueurs répètent une séquence de plus en plus complexe de lumières et de sons. Construit pour améliorer la logique et les compétences de reconnaissance de motifs à travers un gameplay interactif."
+  5: "Un jeu de mémoire classique où les joueurs répètent une séquence de plus en plus complexe de lumières et de sons. Construit pour améliorer la logique et les compétences de reconnaissance de motifs à travers un gameplay interactif.",
+};
+
+// French translations for project titles
+const projectTitlesFr: Record<number, string> = {
+  1: "Journal d'Actualités Numérique",
+  2: "Site de Traduction Professionnelle",
+  3: "Plateforme E-Commerce",
+  4: "Application de Business Intelligence Moderne",
+  5: "Jeu Simon",
 };
 
 export default function Projects() {
@@ -278,10 +287,15 @@ export default function Projects() {
                   </div>
                   <div className="relative z-10 p-8">
                     <h3 className="text-xl sm:text-2xl font-bold text-slate-800 mb-4 group-hover:text-teal-700 transition-colors duration-300">
-                      {project.title}
+                      {language === "fr"
+                        ? projectTitlesFr[project.id] || project.title
+                        : project.title}
                     </h3>
                     <p className="text-slate-600 mb-6 leading-relaxed transition-colors duration-300">
-                      {language === "fr" ? projectDescriptionsFr[project.id] || project.description : project.description}
+                      {language === "fr"
+                        ? projectDescriptionsFr[project.id] ||
+                          project.description
+                        : project.description}
                     </p>
                     <div className="flex flex-wrap gap-2 mb-6">
                       {project.technologies.map((tech, techIndex) => (
@@ -381,10 +395,15 @@ export default function Projects() {
                     </div>
                     <div className="relative z-10 p-5">
                       <h3 className="text-lg font-bold text-slate-800 mb-3 group-hover:text-purple-700 transition-colors duration-300">
-                        {project.title}
+                        {language === "fr"
+                          ? projectTitlesFr[project.id] || project.title
+                          : project.title}
                       </h3>
                       <p className="text-slate-600 text-sm mb-4 leading-relaxed line-clamp-3 transition-colors duration-300">
-                        {language === "fr" ? projectDescriptionsFr[project.id] || project.description : project.description}
+                        {language === "fr"
+                          ? projectDescriptionsFr[project.id] ||
+                            project.description
+                          : project.description}
                       </p>
                       <div className="flex flex-wrap gap-1 mb-4">
                         {project.technologies
