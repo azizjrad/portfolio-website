@@ -190,11 +190,8 @@ export default function Home() {
               {/* Simple subtitle with normal styling */}
               <div className="space-y-6 max-w-4xl mx-auto">
                 <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-4">
-                  Full Stack Developer
+                  {t("heroRole")}
                 </h2>
-                <p className="text-lg sm:text-xl md:text-2xl text-slate-600 leading-relaxed font-light">
-                  {t("heroSubtitle")}
-                </p>
               </div>
             </div>
 
@@ -233,67 +230,57 @@ export default function Home() {
               className="flex justify-center space-x-6 sm:space-x-8 pt-12 animate-fade-in"
               style={{ animationDelay: "400ms" }}
             >
-              {[
-                {
-                  href: "https://github.com/azizjrad",
-                  icon: Github,
-                  color: "teal",
-                  label: "GitHub",
-                },
-                {
-                  href: "https://www.linkedin.com/in/azizjrad/",
-                  icon: Linkedin,
-                  color: "purple",
-                  label: "LinkedIn",
-                },
-                {
-                  href: "/contact",
-                  icon: Mail,
-                  color: "teal",
-                  label: "Email",
-                  isInternal: true,
-                },
-              ].map((social, index) =>
-                social.isInternal ? (
-                  <Link
-                    key={social.label}
-                    href={social.href}
-                    className={`group relative p-5 sm:p-6 bg-white/90 backdrop-blur-sm rounded-3xl text-slate-600 hover:text-white border-2 border-slate-200/50 hover:border-${social.color}-400/50 transition-all duration-500 transform hover:-translate-y-4 hover:scale-110 hover:shadow-2xl hover:shadow-${social.color}-500/30 overflow-hidden`}
-                  >
-                    <div
-                      className={`absolute inset-0 bg-gradient-to-r from-${social.color}-600 to-${social.color}-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl`}
-                    ></div>
-                    {/* Glassy highlight overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl backdrop-blur-sm"></div>
-                    {/* Animated shine effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"></div>
-                    <social.icon
-                      size={32}
-                      className="relative z-10 group-hover:scale-110 transition-transform duration-300"
-                    />
-                  </Link>
-                ) : (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`group relative p-5 sm:p-6 bg-white/90 backdrop-blur-sm rounded-3xl text-slate-600 hover:text-white border-2 border-slate-200/50 hover:border-${social.color}-400/50 transition-all duration-500 transform hover:-translate-y-4 hover:scale-110 hover:shadow-2xl hover:shadow-${social.color}-500/30 overflow-hidden`}
-                  >
-                    <div
-                      className={`absolute inset-0 bg-gradient-to-r from-${social.color}-600 to-${social.color}-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl`}
-                    ></div>
-                    {/* Glassy highlight overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl backdrop-blur-sm"></div>
-                    {/* Animated shine effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"></div>
-                    <social.icon
-                      size={32}
-                      className="relative z-10 group-hover:scale-110 transition-transform duration-300"
-                    />
-                  </a>
-                )
-              )}
+              {/* GitHub */}
+              <a
+                href="https://github.com/azizjrad"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative p-5 sm:p-6 bg-white/90 backdrop-blur-sm rounded-3xl text-slate-600 hover:text-white border-2 border-slate-200/50 hover:border-teal-400/50 transition-all duration-500 transform hover:-translate-y-4 hover:scale-110 hover:shadow-2xl hover:shadow-teal-500/30 overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-teal-600 to-teal-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+                {/* Glassy highlight overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl backdrop-blur-sm"></div>
+                {/* Animated shine effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"></div>
+                <Github
+                  size={32}
+                  className="relative z-10 group-hover:scale-110 transition-transform duration-300"
+                />
+              </a>
+
+              {/* LinkedIn */}
+              <a
+                href="https://www.linkedin.com/in/azizjrad/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative p-5 sm:p-6 bg-white/90 backdrop-blur-sm rounded-3xl text-slate-600 hover:text-white border-2 border-slate-200/50 hover:border-blue-400/50 transition-all duration-500 transform hover:-translate-y-4 hover:scale-110 hover:shadow-2xl hover:shadow-blue-500/30 overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+                {/* Glassy highlight overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl backdrop-blur-sm"></div>
+                {/* Animated shine effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"></div>
+                <Linkedin
+                  size={32}
+                  className="relative z-10 group-hover:scale-110 transition-transform duration-300"
+                />
+              </a>
+
+              {/* Email */}
+              <Link
+                href="/contact"
+                className="group relative p-5 sm:p-6 bg-white/90 backdrop-blur-sm rounded-3xl text-slate-600 hover:text-white border-2 border-slate-200/50 hover:border-teal-400/50 transition-all duration-500 transform hover:-translate-y-4 hover:scale-110 hover:shadow-2xl hover:shadow-teal-500/30 overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-teal-600 to-teal-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+                {/* Glassy highlight overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl backdrop-blur-sm"></div>
+                {/* Animated shine effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out"></div>
+                <Mail
+                  size={32}
+                  className="relative z-10 group-hover:scale-110 transition-transform duration-300"
+                />
+              </Link>
             </div>
           </div>
         </div>

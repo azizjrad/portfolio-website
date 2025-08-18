@@ -13,29 +13,29 @@ import { useLanguage } from "../../contexts/LanguageContext";
 const experience = [
   {
     title: "Web Developer",
-    company: "High School of Digital Economy.",
-    location: "Manouba, Tunisia",
+    company: "Self-Employed",
+    location: "Remote",
     period: "2025 - Present",
     description: [
       "Developed and maintained responsive web applications using React and Next.js",
-      "Collaborated with design team to implement pixel-perfect UI components",
-      "Optimized application performance resulting in 40% faster load times",
-      "Mentored junior developers and conducted code reviews",
-    ],
-  },
-  {
-    title: "Web Developer Intern",
-    company: "Capgemini.",
-    location: "Remote",
-    period: "2021 - 2024",
-    description: [
-      "Built client websites using modern web technologies",
-      "Implemented responsive designs and ensured cross-browser compatibility",
-      "Worked closely with clients to understand requirements and deliver solutions",
-      "Gained experience with version control and agile development practices",
+      "Built reusable UI components with Tailwind CSS and shadcn/ui",
+      "Integrated REST APIs and implemented backend functionalities",
+      "Deployed to Vercel and improved performance and SEO (meta, Open Graph, JSON-LD)",
     ],
   },
 ];
+
+// French translations for experience bullet points
+const experienceFrMap: Record<string, string> = {
+  "Developed and maintained responsive web applications using React and Next.js":
+    "Développé et maintenu des applications web responsives avec React et Next.js",
+  "Built reusable UI components with Tailwind CSS and shadcn/ui":
+    "Créé des composants UI réutilisables avec Tailwind CSS et shadcn/ui",
+  "Integrated REST APIs and implemented backend functionalities":
+    "Intégré des API REST et mis en place des fonctionnalités backend",
+  "Deployed to Vercel and improved performance and SEO (meta, Open Graph, JSON-LD)":
+    "Déployé sur Vercel et amélioré les performances et le SEO (meta, Open Graph, JSON‑LD)",
+};
 
 const education = [
   {
@@ -326,7 +326,7 @@ export default function Resume() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
                       <h3 className="text-xl font-bold text-slate-800 transition-colors duration-300">
-                        {job.title}
+                        {language === "fr" ? "Développeur web" : job.title}
                       </h3>
                       <div className="flex items-center text-slate-500 text-sm transition-colors duration-300">
                         <Calendar size={16} className="mr-1" />
@@ -342,17 +342,23 @@ export default function Resume() {
                       </span>
                     </div>
                     <ul className="space-y-2">
-                      {job.description.map((item, i) => (
-                        <li
-                          key={i}
-                          className="text-slate-600 flex items-start transition-colors duration-300"
-                        >
-                          <span className="text-teal-500 mr-2 mt-2 transition-colors duration-300">
-                            •
-                          </span>
-                          {item}
-                        </li>
-                      ))}
+                      {job.description.map((item, i) => {
+                        const text =
+                          language === "fr"
+                            ? experienceFrMap[item] || item
+                            : item;
+                        return (
+                          <li
+                            key={i}
+                            className="text-slate-600 flex items-start transition-colors duration-300"
+                          >
+                            <span className="text-teal-500 mr-2 mt-2 transition-colors duration-300">
+                              •
+                            </span>
+                            {text}
+                          </li>
+                        );
+                      })}
                     </ul>
                   </div>
                 </div>
@@ -370,7 +376,9 @@ export default function Resume() {
             <div key={index} className="mb-6 last:mb-0">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
                 <h3 className="text-xl font-bold text-slate-800 transition-colors duration-300">
-                  {edu.degree}
+                  {language === "fr"
+                    ? "Licence en Informatique de Gestion, spécialité E‑Business"
+                    : edu.degree}
                 </h3>
                 <div className="flex items-center text-slate-500 text-sm transition-colors duration-300">
                   <Calendar size={16} className="mr-1" />
@@ -378,15 +386,15 @@ export default function Resume() {
                 </div>
               </div>
               <div className="flex items-center text-teal-600 font-medium mb-3 transition-colors duration-300">
-                <span>{edu.school}</span>
+                <span>
+                  {language === "fr"
+                    ? "École Supérieure d’Économie Numérique"
+                    : edu.school}
+                </span>
                 <span className="mx-2">•</span>
                 <span className="flex items-center">
                   <MapPin size={14} className="mr-1" />
                   {edu.location}
-                </span>
-                <span className="mx-2">•</span>
-                <span>
-                  {t("gpa")}: {edu.gpa}
                 </span>
               </div>
               <div>

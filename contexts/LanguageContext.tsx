@@ -26,6 +26,7 @@ const translations = {
     heroTitle: "Passionate Developer",
     heroSubtitle:
       "Business Computing student specializing in E-Business, with hands-on experience in frontend development and a strong interest in Business Intelligence. Skilled in creating clean, user-friendly web interfaces with a focus on UI/UX design and strategic problem-solving. Passionate about combining technology, design, and data to build solutions that address real-world business needs.",
+    heroRole: "Full Stack Developer",
     getInTouch: "Get in Touch",
     viewMyWork: "View My Work",
     greeting: "Hi, I'm",
@@ -36,7 +37,7 @@ const translations = {
     aboutSubtitle:
       "Passionate developer with a love for creating innovative solutions",
     aboutDescription:
-      "I'm Aziz Jrad a Business Computing student from Tunisia, currently focusing on E-Business. I'm passionate about technology and enjoy exploring how strategy, data, and design can work together to solve real-world problems. Whether it's building clean, intuitive interfaces or using data to drive smarter decisions, I'm driven by the idea of creating meaningful, practical solutions.",
+      "I'm Aziz Jrad, a Business Computing student from Tunisia specializing in E-Business. With hands-on experience in frontend and backend development and a passion for UI/UX design, I enjoy combining technology, design, and data to create meaningful solutions that solve real-world business problems.",
     skillsTitle: "Skills & Technologies",
     experienceTitle: "Experience",
     myStory: "My Story",
@@ -112,7 +113,7 @@ const translations = {
     portfolio: "Portfolio",
     professionalSummary: "Professional Summary",
     professionalSummaryText:
-      "Passionate and detail-oriented Frontend Developer with 3+ years of experience creating responsive, user-friendly web applications. Proficient in modern JavaScript frameworks and committed to writing clean, maintainable code. Strong problem-solving skills and experience working in agile development environments. Seeking to leverage technical expertise and creative problem-solving abilities to contribute to innovative web development projects.",
+      "Full‑stack developer focused on building clean, responsive, and accessible web apps. I enjoy turning ideas into simple, fast UIs, wiring solid APIs, and writing maintainable TypeScript. Curious, collaborative, and always learning.",
     professionalExperience: "Professional Experience",
     education: "Education",
     certifications: "Certifications",
@@ -143,6 +144,7 @@ const translations = {
     heroTitle: "Développeur Passionné",
     heroSubtitle:
       "Étudiant en Informatique de Gestion spécialisé en E-Business, avec une expérience pratique en développement frontend et un fort intérêt pour l'Intelligence d'Affaires. Compétent dans la création d'interfaces web propres et conviviales avec un focus sur la conception UI/UX et la résolution stratégique de problèmes. Passionné par la combinaison de la technologie, du design et des données pour créer des solutions qui répondent aux besoins commerciaux réels.",
+    heroRole: "Développeur Full-Stack",
     getInTouch: "Prenez Contact",
     viewMyWork: "Voir Mon Travail",
     greeting: "Salut, je suis",
@@ -153,11 +155,11 @@ const translations = {
     aboutSubtitle:
       "Développeur passionné avec un amour pour créer des solutions innovantes",
     aboutDescription:
-      "Je suis Aziz Jrad un étudiant en Informatique de Gestion de Tunisie, actuellement spécialisé en E-Business. Je suis passionné par la technologie et j'aime explorer comment la stratégie, les données et le design peuvent travailler ensemble pour résoudre des problèmes du monde réel. Que ce soit pour créer des interfaces propres et intuitives ou utiliser les données pour prendre des décisions plus intelligentes, je suis motivé par l'idée de créer des solutions significatives et pratiques.",
+      "Je suis Aziz Jrad, un étudiant en Informatique de Gestion de Tunisie spécialisé en E-Business. Avec une expérience pratique en développement frontend et backend et une passion pour la conception UI/UX, j'aime combiner technologie, design et données pour créer des solutions significatives qui résolvent des problèmes commerciaux réels.",
     skillsTitle: "Compétences & Technologies",
     experienceTitle: "Expérience",
     myStory: "Mon Histoire",
-    softSkills: "Compétences Relationnelles",
+    softSkills: "Soft Skills",
     coreValues: "Valeurs Fondamentales",
     whatDrivesMe: "Ce Qui Me Motive",
     principlesGuide:
@@ -231,7 +233,7 @@ const translations = {
     portfolio: "Portfolio",
     professionalSummary: "Résumé Professionnel",
     professionalSummaryText:
-      "Développeur Frontend passionné et soucieux du détail avec plus de 3 ans d'expérience dans la création d'applications web responsives et conviviales. Compétent dans les frameworks JavaScript modernes et engagé à écrire du code propre et maintenable. Solides compétences en résolution de problèmes et expérience de travail dans des environnements de développement agiles. Cherche à tirer parti de l'expertise technique et des capacités créatives de résolution de problèmes pour contribuer à des projets de développement web innovants.",
+      "Développeur full‑stack, je crée des applications web propres, responsives et accessibles. J’aime transformer des idées en interfaces simples et rapides, connecter des APIs fiables et écrire du TypeScript maintenable. Curieux, collaboratif et toujours en apprentissage.",
     professionalExperience: "Expérience Professionnelle",
     education: "Éducation",
     certifications: "Certifications",

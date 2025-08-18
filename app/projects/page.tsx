@@ -12,11 +12,11 @@ const projects = [
       "A modern, full-stack news website supporting Arabic and English content with real-time analytics and comprehensive admin management. Features bilingual content management with RTL/LTR support, advanced search functionality, and a dark-themed admin dashboard with glass morphism design. Built with performance optimization, secure authentication, and SEO-friendly architecture for professional news publishing.",
     image: "/akhbarna.png",
     technologies: [
-      "Next.js 14",
+      "Next.js ",
       "TypeScript",
-      "Tailwind CSS",
-      "PostgreSQL",
       "Node.js",
+      "Tailwind CSS",
+      "MongoDB",
     ],
     liveUrl: "https://journal-ppom.vercel.app/",
     githubUrl: "https://github.com/azizjrad/journal",
@@ -24,9 +24,20 @@ const projects = [
   },
   {
     id: 2,
+    title: "Translation Company Website",
+    description:
+      "T4Translation is a modern bilingual website (English/Arabic) built for a translation and localization service. It’s designed with a fast, mobile-first user experience in mind, featuring full right-to-left (RTL) support and a clean, consistent UI. The site uses React i18next for internationalization, enabling seamless language switching with a persistent AR/ENG toggle and dynamic content arrays. Key sections include detailed service pages, an “Areas of Expertise” showcase, and two fully validated forms (Contact and Get Started) powered by EmailJS, with smooth focus and hover states for better usability. On the technical side, the project is optimized for SEO with meta tags and structured JSON-LD data, making it both user-friendly and search-engine ready.",
+    image: "/t4translation.png",
+    technologies: ["React", "TypeScript", "Tailwind CSS"],
+    liveUrl: "https://www.t4translation.com",
+    githubUrl: "https://github.com/azizjrad/t4translation",
+    featured: true,
+  },
+  {
+    id: 3,
     title: "E-Commerce Platform",
     description:
-      "Esouk Tounsi is a simple e-commerce web application built to showcase local Tunisian products and promote digital adoption among small local merchants. The platform simulates an online marketplace where users can browse products by category, view product details, and simulate a shopping experience through a clean PHP-based interface.",
+      "Esouk Tounsi is an e-commerce web application built to showcase local Tunisian products and promote digital adoption among small local merchants. The platform simulates an online marketplace where users can browse products by category, view product details, and simulate a shopping experience through a clean PHP-based interface.",
     image: "/esouk.png",
     technologies: ["PHP", "Javascript", "Bootstrap", "MySQL"],
     liveUrl: "https://esouk-tounsi.ct.ws/public/pages/index.php",
@@ -34,19 +45,12 @@ const projects = [
     featured: true,
   },
   {
-    id: 3,
+    id: 4,
     title: "Modern Business Intelligence App",
     description:
       "InsightForge Dashboard is a modern Business Intelligence (BI) web application designed to provide real-time analytics and interactive data visualization for hospitality and service-based businesses. The platform helps users monitor performance metrics, understand customer behavior, and make data-driven decisions through a clean and intuitive interface.",
     image: "/insightforge.png",
-    technologies: [
-      "React",
-      "Next.js",
-      "Flask",
-      "TailwindCSS",
-      "Pandas",
-      "SQLite",
-    ],
+    technologies: ["Next.js", "Flask", "TailwindCSS", "Pandas", "Postgresql"],
     liveUrl: "https://example.com",
     githubUrl: "https://github.com/azizjrad/Insight-Forge",
     featured: true,
