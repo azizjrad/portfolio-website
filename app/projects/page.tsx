@@ -18,7 +18,7 @@ const projects = [
       "Tailwind CSS",
       "MongoDB",
     ],
-    liveUrl: "https://journal-ppom.vercel.app/",
+    liveUrl: "https://akhbarna.vercel.app/",
     githubUrl: "https://github.com/azizjrad/journal",
     featured: true,
   },
