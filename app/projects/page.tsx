@@ -18,8 +18,8 @@ const projects = [
       "Tailwind CSS",
       "MongoDB",
     ],
-    liveUrl: "https://akhbarna.vercel.app/",
-    githubUrl: "https://github.com/azizjrad/journal",
+    liveUrl: "https://akhbarna.vercel.app",
+    githubUrl: "https://github.com/azizjrad/journal2",
     featured: true,
   },
   {
@@ -46,17 +46,6 @@ const projects = [
   },
   {
     id: 4,
-    title: "Modern Business Intelligence App",
-    description:
-      "InsightForge Dashboard is a modern Business Intelligence (BI) web application designed to provide real-time analytics and interactive data visualization for hospitality and service-based businesses. The platform helps users monitor performance metrics, understand customer behavior, and make data-driven decisions through a clean and intuitive interface.",
-    image: "/insightforge.png",
-    technologies: ["Next.js", "Flask", "TailwindCSS", "Pandas", "Postgresql"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/azizjrad/Insight-Forge",
-    featured: true,
-  },
-  {
-    id: 5,
     title: "Simon Game",
     description:
       "A classic memory game where players repeat an increasingly complex sequence of lights and sounds. Built to improve logic and pattern recognition skills through interactive gameplay.",
