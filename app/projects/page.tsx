@@ -10,7 +10,7 @@ const projects = [
     title: "NurseHub",
     description:
       "A comprehensive home healthcare platform connecting patients with professional nursing care. Features trilingual support (French, Arabic with RTL, English), real-time appointment tracking, and automated notifications via SendGrid and Twilio. Built with Next.js 14, TypeScript, and PostgreSQL with Prisma ORM. Includes a powerful admin dashboard for managing appointments, approval workflows, and comprehensive statistics with accessibility features across all devices.",
-    image: "/Nursehub.png",
+    image: "/NurseHub.png",
     technologies: [
       "Next.js",
       "TypeScript",
@@ -465,3 +465,4 @@ export default function Projects() {
     </div>
   );
 }
+
